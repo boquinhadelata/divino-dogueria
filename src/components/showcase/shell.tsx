@@ -9,6 +9,7 @@ const NAV = [
   { to: "/typography", label: "Tipografia" },
   { to: "/components", label: "Componentes" },
   { to: "/cardapio", label: "Cardápio" },
+  { to: "/site", label: "Site Divino" },
 ] as const;
 
 function useTheme() {
