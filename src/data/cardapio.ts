@@ -1,7 +1,50 @@
+import hotdogTradicional from "../assets/produtos/hotdog-tradicional.jpg";
+import hotdogDuplo from "../assets/produtos/hotdog-duplo.jpg";
+import hotdogJunior from "../assets/produtos/hotdog-junior.jpg";
+import hotdogCalabresa from "../assets/produtos/hotdog-calabresa.jpg";
+import hotdogCarnePanela from "../assets/produtos/hotdog-carne-panela-cheddar.jpg";
+import hotdogCostela from "../assets/produtos/hotdog-costela-mostarda-mel.jpg";
+import hotdogDivino from "../assets/produtos/hotdog-divino.jpg";
+import hotdogDoritos from "../assets/produtos/hotdog-doritos.jpg";
+import hotdogVegetariano from "../assets/produtos/hotdog-vegetariano.jpg";
+import fritas from "../assets/produtos/fritas.jpg";
+import batataDivina from "../assets/produtos/batata-divina.jpg";
+import batataCheddarBacon from "../assets/produtos/batata-cheddar-bacon.jpg";
+import batataChocolate from "../assets/produtos/batata-chocolate-ovomaltine.jpg";
+import batataCalabresa from "../assets/produtos/batata-calabresa-acebolada.jpg";
+import milkshakeDoceLeite from "../assets/produtos/milkshake-doce-de-leite.jpg";
+import milkshakeChocoOreo from "../assets/produtos/milkshake-choco-oreo.jpg";
+import pudinzim from "../assets/produtos/pudinzim.jpg";
+import cookieNutella from "../assets/produtos/cookie-nutella.jpg";
+import miniChurros from "../assets/produtos/mini-churros-mumu.jpg";
+import cocaLata from "../assets/produtos/coca-lata.jpg";
+import guaranaLata from "../assets/produtos/guarana-lata.jpg";
+import guaranaLataZero from "../assets/produtos/guarana-lata-zero.jpg";
+import spriteLata from "../assets/produtos/sprite-lata.jpg";
+import sucoUva from "../assets/produtos/suco-uva.jpg";
+import coca2l from "../assets/produtos/coca-2l.jpg";
+import coca2lZero from "../assets/produtos/coca-2l-zero.jpg";
+import aguaSemGas from "../assets/produtos/agua-sem-gas.jpg";
+import aguaComGas from "../assets/produtos/agua-com-gas.jpg";
+import heineken from "../assets/produtos/heineken.jpg";
+import maioneseCaseira from "../assets/produtos/maionese-caseira.jpg";
+import maioneseCebolinha from "../assets/produtos/maionese-cebolinha.jpg";
+import potinhoCatchup from "../assets/produtos/potinho-catchup.jpg";
+import potinhoMostarda from "../assets/produtos/potinho-mostarda.jpg";
+import sacheHemmerHeinz from "../assets/produtos/sache-hemmer-heinz.jpg";
+
+export const FOTOS = {
+  hotdogDivino,
+  batataCheddarBacon,
+  milkshakeDoceLeite,
+  hotdogDuplo,
+};
+
 export type MenuItem = {
   nome: string;
   preco: string;
   descricao: string;
+  imagem?: string;
   destaque?: "Mais pedido" | "Edição limitada" | "Vegetariano";
 };
 
