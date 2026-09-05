@@ -1,29 +1,39 @@
 # Fotos reais dos produtos no site da Divino Dogueria
 
-Aplicar as 10 fotos enviadas (prints do cardápio original) no site `/site`, separando a foto da descrição e melhorando a qualidade das imagens.
+Aplicar as fotos enviadas (prints do cardápio original) no site `/site`, separando a foto da descrição, tratando cada imagem individualmente em alta resolução.
 
-## O que será feito
+## Produtos com foto recebida (30)
 
-### 1. Separar foto da descrição (recorte automático)
-- Cada print tem a foto do produto na parte de cima e um painel escuro com nome/descrição embaixo
-- Script (Python/PIL) detecta a linha onde começa o painel escuro e recorta apenas a foto do produto, descartando o painel de texto
-- As descrições em texto já existem no cardápio (`src/data/cardapio.ts`) — nada de texto fica "grudado" na imagem
+- **Hot dogs**: Tradicional, Duplo, Divino Junior, Calabresa, Carne de Panela e Cheddar, Costela Mostarda e Mel, Divino, Doritos, Vegetariano
+- **Acompanhamentos**: Fritas, Batata Divina, Batata Cheddar e Bacon, Batata com Chocolate/Ovomaltine, Batata com Calabresa Acebolada
+- **Molhos**: Maionese Caseira, Maionese com Cebolinha, Potinho Catchup, Potinho Mostarda, Sachê Hemmer/Heinz
+- **Docinhos**: Pudinzim, Cookie Nutella, Mini Churros com MUMU
+- **Milkshakes**: Doce de Leite, Choco com Oreo
+- **Bebidas**: Coca lata, Guaraná lata, Guaraná Zero lata, Sprite lata, Suco de Uva Cavichion, Coca 2L, Coca 2L Zero, Água sem gás, Água com gás, Heineken Long Neck
 
-### 2. Melhorar as fotos
-- Cada foto recortada passa por uma edição de IA: melhorar nitidez, cores vibrantes e iluminação apetitosa, mantendo o produto original fiel (sem inventar ingredientes nem mudar o prato)
-- Resultado salvo em `src/assets/produtos/` (ex.: `tradicional.jpg`, `duplo.jpg`, `fritas.jpg`...)
+## Como será feito
+
+### 1. Separar a foto da descrição — uma a uma
+- Cada print tem a foto em cima e um painel escuro com nome/descrição embaixo; alguns têm ainda botões de voltar/compartilhar sobrepostos no topo
+- Para cada imagem: detectar onde começa o painel escuro, recortar somente a área da foto e remover as bordas com botões sobrepostos
+- Conferência visual imagem por imagem — nenhum texto sobra dentro da foto
+- A imagem do print com 5 molhos em lista (`image-30`) é fatiada em 5 fotos separadas, uma por molho
+
+### 2. Tratamento profissional, foto a foto
+- Cada foto passa por edição individual: aumento de resolução, nitidez, correção de iluminação e cor apetitosa, limpeza de ruído — sempre mantendo o produto real, sem inventar ingredientes
+- Enquadramento padronizado (mesma proporção) para o cardápio ficar alinhado
+- Salvas em `src/assets/produtos/` com nomes claros (`hotdog-divino.jpg`, `batata-cheddar-bacon.jpg`, ...)
 
 ### 3. Ligar as fotos ao cardápio
-- Adicionar campo de imagem nos itens de `src/data/cardapio.ts` para os 10 produtos com foto real:
-  - Tradicional, Duplo, Junior, Calabresa, Carne de Panela e Cheddar, Costela Mostarda e Mel, Divino, Doritos, Vegetariano, Fritas
-- Página `/site/cardapio`: cada item com foto mostra a imagem real no card; itens sem foto seguem com o visual atual
-- Página inicial `/site`: trocar as imagens temporárias geradas (hero, fritas etc.) pelas fotos reais dos produtos — hero passa a usar o Hot Dog Divino
-- Demais itens do cardápio (docinhos, combos, milkshakes, bebidas) aguardam novas fotos que você enviar
+- Adicionar campo de imagem nos itens de `src/data/cardapio.ts`, associando cada foto ao produto correspondente
+- Página `/site/cardapio`: card de cada item passa a exibir a foto real
+- Página inicial `/site`: substituir as imagens temporárias geradas pelas fotos reais (destaque com o Hot Dog Divino, seções de acompanhamentos e milkshakes)
+- Itens do cardápio ainda sem foto continuam apenas com texto, no mesmo estilo
 
 ### 4. Verificação
-- Conferir no navegador todas as páginas do site com as fotos reais aplicadas, sem erros de console
+- Revisão de todas as páginas do site no navegador, conferindo cada foto no lugar certo e sem erros
 
 ## Detalhes técnicos
-- Recorte com PIL (detecção da faixa escura) + edição via ferramenta de edição de imagem com IA
-- Imagens finais em JPG otimizado dentro de `src/assets/produtos/`
-- Nenhuma alteração no design system em si — apenas no site `/site`
+- Recorte com PIL (detecção da faixa escura + corte das barras de UI) e depois edição de IA por imagem
+- Saída em JPG de alta qualidade dentro de `src/assets/produtos/`
+- Nenhuma alteração no design system — apenas nos dados e nas páginas do site
