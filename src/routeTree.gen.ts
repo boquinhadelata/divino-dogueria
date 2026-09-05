@@ -16,6 +16,10 @@ import { Route as ColorsRouteImport } from './routes/colors'
 import { Route as CardapioRouteImport } from './routes/cardapio'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SiteIndexRouteImport } from './routes/site.index'
+import { Route as SiteSobreRouteImport } from './routes/site.sobre'
+import { Route as SiteOndeEstamosRouteImport } from './routes/site.onde-estamos'
+import { Route as SiteContatoRouteImport } from './routes/site.contato'
+import { Route as SiteCardapioRouteImport } from './routes/site.cardapio'
 import { Route as Char91__mockupChar93PreviewSplatRouteImport } from './routes/[__mockup].preview.$'
 import { Route as Char91__componentChar93PreviewSplatRouteImport } from './routes/[__component].preview.$'
 
@@ -54,6 +58,26 @@ const SiteIndexRoute = SiteIndexRouteImport.update({
   path: '/',
   getParentRoute: () => SiteRoute,
 } as any)
+const SiteSobreRoute = SiteSobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteOndeEstamosRoute = SiteOndeEstamosRouteImport.update({
+  id: '/onde-estamos',
+  path: '/onde-estamos',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteContatoRoute = SiteContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteCardapioRoute = SiteCardapioRouteImport.update({
+  id: '/cardapio',
+  path: '/cardapio',
+  getParentRoute: () => SiteRoute,
+} as any)
 const Char91__mockupChar93PreviewSplatRoute =
   Char91__mockupChar93PreviewSplatRouteImport.update({
     id: '/__mockup/preview/$',
@@ -74,6 +98,10 @@ export interface FileRoutesByFullPath {
   '/components': typeof ComponentsRoute
   '/site': typeof SiteRouteWithChildren
   '/typography': typeof TypographyRoute
+  '/site/cardapio': typeof SiteCardapioRoute
+  '/site/contato': typeof SiteContatoRoute
+  '/site/onde-estamos': typeof SiteOndeEstamosRoute
+  '/site/sobre': typeof SiteSobreRoute
   '/site/': typeof SiteIndexRoute
   '/__component/preview/$': typeof Char91__componentChar93PreviewSplatRoute
   '/__mockup/preview/$': typeof Char91__mockupChar93PreviewSplatRoute
@@ -84,6 +112,10 @@ export interface FileRoutesByTo {
   '/colors': typeof ColorsRoute
   '/components': typeof ComponentsRoute
   '/typography': typeof TypographyRoute
+  '/site/cardapio': typeof SiteCardapioRoute
+  '/site/contato': typeof SiteContatoRoute
+  '/site/onde-estamos': typeof SiteOndeEstamosRoute
+  '/site/sobre': typeof SiteSobreRoute
   '/site': typeof SiteIndexRoute
   '/__component/preview/$': typeof Char91__componentChar93PreviewSplatRoute
   '/__mockup/preview/$': typeof Char91__mockupChar93PreviewSplatRoute
@@ -96,6 +128,10 @@ export interface FileRoutesById {
   '/components': typeof ComponentsRoute
   '/site': typeof SiteRouteWithChildren
   '/typography': typeof TypographyRoute
+  '/site/cardapio': typeof SiteCardapioRoute
+  '/site/contato': typeof SiteContatoRoute
+  '/site/onde-estamos': typeof SiteOndeEstamosRoute
+  '/site/sobre': typeof SiteSobreRoute
   '/site/': typeof SiteIndexRoute
   '/__component/preview/$': typeof Char91__componentChar93PreviewSplatRoute
   '/__mockup/preview/$': typeof Char91__mockupChar93PreviewSplatRoute
@@ -109,6 +145,10 @@ export interface FileRouteTypes {
     | '/components'
     | '/site'
     | '/typography'
+    | '/site/cardapio'
+    | '/site/contato'
+    | '/site/onde-estamos'
+    | '/site/sobre'
     | '/site/'
     | '/__component/preview/$'
     | '/__mockup/preview/$'
@@ -119,6 +159,10 @@ export interface FileRouteTypes {
     | '/colors'
     | '/components'
     | '/typography'
+    | '/site/cardapio'
+    | '/site/contato'
+    | '/site/onde-estamos'
+    | '/site/sobre'
     | '/site'
     | '/__component/preview/$'
     | '/__mockup/preview/$'
@@ -130,6 +174,10 @@ export interface FileRouteTypes {
     | '/components'
     | '/site'
     | '/typography'
+    | '/site/cardapio'
+    | '/site/contato'
+    | '/site/onde-estamos'
+    | '/site/sobre'
     | '/site/'
     | '/__component/preview/$'
     | '/__mockup/preview/$'
@@ -197,6 +245,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteIndexRouteImport
       parentRoute: typeof SiteRoute
     }
+    '/site/sobre': {
+      id: '/site/sobre'
+      path: '/sobre'
+      fullPath: '/site/sobre'
+      preLoaderRoute: typeof SiteSobreRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/site/onde-estamos': {
+      id: '/site/onde-estamos'
+      path: '/onde-estamos'
+      fullPath: '/site/onde-estamos'
+      preLoaderRoute: typeof SiteOndeEstamosRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/site/contato': {
+      id: '/site/contato'
+      path: '/contato'
+      fullPath: '/site/contato'
+      preLoaderRoute: typeof SiteContatoRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/site/cardapio': {
+      id: '/site/cardapio'
+      path: '/cardapio'
+      fullPath: '/site/cardapio'
+      preLoaderRoute: typeof SiteCardapioRouteImport
+      parentRoute: typeof SiteRoute
+    }
     '/__mockup/preview/$': {
       id: '/__mockup/preview/$'
       path: '/__mockup/preview/$'
@@ -215,10 +291,18 @@ declare module '@tanstack/react-router' {
 }
 
 interface SiteRouteChildren {
+  SiteCardapioRoute: typeof SiteCardapioRoute
+  SiteContatoRoute: typeof SiteContatoRoute
+  SiteOndeEstamosRoute: typeof SiteOndeEstamosRoute
+  SiteSobreRoute: typeof SiteSobreRoute
   SiteIndexRoute: typeof SiteIndexRoute
 }
 
 const SiteRouteChildren: SiteRouteChildren = {
+  SiteCardapioRoute: SiteCardapioRoute,
+  SiteContatoRoute: SiteContatoRoute,
+  SiteOndeEstamosRoute: SiteOndeEstamosRoute,
+  SiteSobreRoute: SiteSobreRoute,
   SiteIndexRoute: SiteIndexRoute,
 }
 
