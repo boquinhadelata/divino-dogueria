@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Instagram, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { cn } from "../../lib/utils";
-import { Button } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 import { CONTATO, PEDIR_GERAL } from "../../data/cardapio";
 
 const NAV = [
@@ -37,11 +37,14 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               </Link>
             ))}
           </nav>
-          <Button asChild size="sm">
-            <a href={PEDIR_GERAL} target="_blank" rel="noopener noreferrer">
-              <MessageCircle aria-hidden /> Pedir agora
-            </a>
-          </Button>
+          <a
+            href={PEDIR_GERAL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonVariants({ size: "sm" })}
+          >
+            <MessageCircle aria-hidden /> Pedir agora
+          </a>
         </div>
         <nav className="flex gap-4 overflow-x-auto border-t-2 border-border px-6 py-3 lg:hidden">
           {NAV.map((item) => (
@@ -93,19 +96,21 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               <li>{CONTATO.telefone}</li>
             </ul>
             <div className="mt-6 flex gap-3">
-              <Button asChild size="sm" variant="primary">
-                <a href={PEDIR_GERAL} target="_blank" rel="noopener noreferrer">
-                  WhatsApp
-                </a>
-              </Button>
+              <a
+                href={PEDIR_GERAL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={buttonVariants({ size: "sm" })}
+              >
+                WhatsApp
+              </a>
               <a
                 href={CONTATO.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram da Divino Dogueria"
-                className="flex size-10 items-center justify-center border-2 border-background transition-colors hover:bg-background hover:text-foreground focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
+                className="flex h-10 items-center border-2 border-background px-4 font-display text-caption font-bold uppercase tracking-wider transition-colors hover:bg-background hover:text-foreground focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
               >
-                <Instagram className="size-4" />
+                Instagram
               </a>
             </div>
           </div>
