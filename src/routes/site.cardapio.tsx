@@ -52,7 +52,16 @@ function DestaqueBadge({ label }: { label: string }) {
 
 function MenuItemCard({ item }: { item: MenuItem }) {
   return (
-    <Card variant="elevated" className="flex h-full flex-col">
+    <Card variant="elevated" padding="none" className="flex h-full flex-col">
+      {item.imagem ? (
+        <img
+          src={item.imagem}
+          alt={item.nome}
+          loading="lazy"
+          className="aspect-[4/3] w-full border-b-2 border-border object-cover"
+        />
+      ) : null}
+      <div className="flex flex-1 flex-col p-6">
       <CardHeader>
         {item.destaque ? <DestaqueBadge label={item.destaque} /> : null}
         <CardTitle>{item.nome}</CardTitle>
