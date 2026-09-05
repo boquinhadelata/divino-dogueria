@@ -96,42 +96,49 @@ export const MENU: MenuGroup[] = [
     itens: [
       {
         nome: "Cachorro Quente Tradicional",
+        imagem: hotdogTradicional,
         preco: "R$ 26,90",
         descricao:
           "Pão de hot dog 30cm, molho de tomate, uma salsicha, vinagrete, batata-palha, maionese Divino (contém leite), molho Divino (contém Barbecue), queijo gratinado e tempero verde.",
       },
       {
         nome: "Cachorro Quente Duplo",
+        imagem: hotdogDuplo,
         preco: "R$ 29,90",
         descricao:
           "Pão de hot dog 30cm, molho de tomate, duas salsichas, vinagrete, batata-palha, maionese Divino (contém leite), molho Divino (contém Barbecue), queijo gratinado e tempero verde.",
       },
       {
         nome: "Hot Dog Divino Junior",
+        imagem: hotdogJunior,
         preco: "R$ 22,00",
         descricao:
           "Pão de hot dog (100g), molho de tomate, maionese Divino (contém leite), catchup, 1 salsicha e 3 batatas sorriso.",
       },
       {
         nome: "Hot Dog Calabresa",
+        imagem: hotdogCalabresa,
         preco: "R$ 31,90",
         descricao:
           "Pão de hot dog 30cm, molho de tomate, salsicha, calabresa em pedaços, batata-palha, maionese Divino (contém leite), molho Divino (contém Barbecue), queijo gratinado e tempero verde.",
       },
       {
         nome: "Hot Dog Carne de Panela e Cheddar",
+        imagem: hotdogCarnePanela,
         preco: "R$ 39,90",
         descricao:
           "Pão de hot dog 30cm, molho de tomate, maionese Divino (contém leite), carne de panela desfiada, molho Divino (contém barbecue), cheddar, farofa de bacon, tempero verde, catchup e batata-palha.",
       },
       {
         nome: "Hot Dog Costela, Mostarda e Mel",
+        imagem: hotdogCostela,
         preco: "R$ 41,90",
         descricao:
           "Pão de hot dog 30cm, molho de tomate, maionese Divino (contém leite), molho Divino (contém Barbecue), costela desfiada com molho de mostarda e mel, queijo gratinado, fritas, catchup e tempero verde.",
       },
       {
         nome: "Hot Dog Divino",
+        imagem: hotdogDivino,
         preco: "R$ 44,90",
         descricao:
           "Pão de hot dog 30cm, molho de tomate, maionese Divino (contém leite), molho Divino (contém Barbecue), calabresa, bacon, carne de panela desfiada, Catupiry, vinagrete, fritas, cheddar, catchup e tempero verde.",
@@ -139,6 +146,7 @@ export const MENU: MenuGroup[] = [
       },
       {
         nome: "Hot Dog Doritos",
+        imagem: hotdogDoritos,
         preco: "R$ 47,50",
         descricao:
           "Edição Limitada - Pão de hot dog 30cm, molho de tomate, maionese Divino (contém leite), molho Divino (contém Barbecue), catchup, mostarda, duas salsichas, cebola roxa, bacon, calabresa, orégano e Doritos.",
@@ -146,6 +154,7 @@ export const MENU: MenuGroup[] = [
       },
       {
         nome: "Hot Dog Vegetariano",
+        imagem: hotdogVegetariano,
         preco: "R$ 42,00",
         descricao:
           "Pão de hot dog 30cm, molho de tomate, uma Linguiça do Futuro, vinagrete, batata-palha, maionese Divino (contém leite), molho Divino (contém Barbecue e leite), queijo gratinado e tempero verde.",
@@ -157,9 +166,10 @@ export const MENU: MenuGroup[] = [
     categoria: "Para acompanhar",
     slug: "para-acompanhar",
     itens: [
-      { nome: "Fritas", preco: "R$ 22,00", descricao: "300 gramas de batata frita." },
+      { nome: "Fritas", imagem: fritas, preco: "R$ 22,00", descricao: "300 gramas de batata frita." },
       {
         nome: "Batata Divina",
+        imagem: batataDivina,
         preco: "R$ 32,00",
         descricao:
           "300g de batata frita, costela desfiada, molho de catupiry com queijo mussarela e tempero verde.",
@@ -167,16 +177,19 @@ export const MENU: MenuGroup[] = [
       },
       {
         nome: "Batata Cheddar e Bacon",
+        imagem: batataCheddarBacon,
         preco: "R$ 32,00",
         descricao: "300g de batata frita, com molho de cheddar cremoso e cubinhos de bacon por cima.",
       },
       {
         nome: "Batata com Chocolate c/ Ovomaltine ou Bacon Cubinhos",
+        imagem: batataChocolate,
         preco: "R$ 28,00",
         descricao: "300g de batata frita já salgada, chocolate ao leite derretido por cima.",
       },
       {
         nome: "Batata com Calabresa Acebolada",
+        imagem: batataCalabresa,
         preco: "R$ 32,00",
         descricao:
           "300g de batata frita, calabresa em pedaços com cebola, metade molho de cheddar e metade molho catupiry com mussarela.",
@@ -189,16 +202,19 @@ export const MENU: MenuGroup[] = [
     itens: [
       {
         nome: "1 Hot Dog Duplo + 1 Fritas + Bebida",
+        imagem: hotdogDuplo,
         preco: "R$ 49,00",
         descricao: "1 Hot Dog Tradicional Duplo + 1 Fritas + 1 Lata de Guaraná.",
       },
       {
         nome: "2 Hot Dog Tradicional + 1 Fritas + Bebida",
+        imagem: hotdogTradicional,
         preco: "R$ 79,00",
         descricao: "2 Hot Dog Tradicional + 1 Fritas + 2 Coca-Cola lata.",
       },
       {
         nome: "4 Hot Dog Tradicional + 1 Bebida",
+        imagem: hotdogDivino,
         preco: "R$ 112,00",
         descricao: "4 Hot Dog Tradicional + 1 Coca-Cola 2l.",
       },
@@ -210,11 +226,13 @@ export const MENU: MenuGroup[] = [
     itens: [
       {
         nome: "Milk Shake Doce de Leite",
+        imagem: milkshakeDoceLeite,
         preco: "R$ 32,00",
         descricao: "MilkShake Doce de Leite MUMU com farofa de paçoca no copo de 350ml.",
       },
       {
         nome: "Milk Shake Choco com Oreo",
+        imagem: milkshakeChocoOreo,
         preco: "R$ 32,00",
         descricao: "MilkShake Chocolate ao leite com pedaços de Oreo no copo de 350ml.",
       },
@@ -224,10 +242,11 @@ export const MENU: MenuGroup[] = [
     categoria: "Docinho",
     slug: "docinho",
     itens: [
-      { nome: "Pudinzim", preco: "R$ 15,99", descricao: "Pudim cremoso de 120g." },
-      { nome: "Cookie Nutella", preco: "R$ 13,99", descricao: "Cookie recheado com Nutella." },
+      { nome: "Pudinzim", imagem: pudinzim, preco: "R$ 15,99", descricao: "Pudim cremoso de 120g." },
+      { nome: "Cookie Nutella", imagem: cookieNutella, preco: "R$ 13,99", descricao: "Cookie recheado com Nutella." },
       {
         nome: "Mini Churros com MUMU",
+        imagem: miniChurros,
         preco: "R$ 22,00",
         descricao: "10 mini churros fritos com acompanhamento de doce de leite MUMU.",
       },
@@ -237,21 +256,31 @@ export const MENU: MenuGroup[] = [
     categoria: "Bebidas",
     slug: "bebidas",
     itens: [
-      { nome: "Coca Cola lata", preco: "R$ 7,00", descricao: "Lata 350ml" },
+      { nome: "Coca Cola lata", imagem: cocaLata, preco: "R$ 7,00", descricao: "Lata 350ml" },
       { nome: "Coca Cola Zero lata", preco: "R$ 7,00", descricao: "Lata 350ml" },
-      { nome: "Guaraná lata", preco: "R$ 7,00", descricao: "Lata 350ml" },
-      { nome: "Guaraná lata Zero", preco: "R$ 7,00", descricao: "Lata 350ml" },
-      { nome: "Sprite lata", preco: "R$ 7,00", descricao: "Lata 350ml" },
+      { nome: "Guaraná lata", imagem: guaranaLata, preco: "R$ 7,00", descricao: "Lata 350ml" },
+      { nome: "Guaraná lata Zero", imagem: guaranaLataZero, preco: "R$ 7,00", descricao: "Lata 350ml" },
+      { nome: "Sprite lata", imagem: spriteLata, preco: "R$ 7,00", descricao: "Lata 350ml" },
       {
         nome: "Suco Uva Integral Bordô ou Branco",
+        imagem: sucoUva,
         preco: "R$ 15,00",
         descricao: "Suco Cavichion Garrafinha 300ml - Sem Conservantes",
       },
-      { nome: "Coca Cola 2l", preco: "R$ 15,00", descricao: "2 litros" },
-      { nome: "Coca Cola 2l Zero", preco: "R$ 15,00", descricao: "2 litros" },
-      { nome: "Água sem Gás", preco: "R$ 6,00", descricao: "500ml" },
-      { nome: "Água com Gás", preco: "R$ 6,00", descricao: "500ml" },
-      { nome: "Heineken Long Neck 330ml", preco: "R$ 12,00", descricao: "Para maiores de 18 anos." },
+      { nome: "Coca Cola 2l", imagem: coca2l, preco: "R$ 15,00", descricao: "2 litros" },
+      { nome: "Coca Cola 2l Zero", imagem: coca2lZero, preco: "R$ 15,00", descricao: "2 litros" },
+      { nome: "Água sem Gás", imagem: aguaSemGas, preco: "R$ 6,00", descricao: "500ml" },
+      { nome: "Água com Gás", imagem: aguaComGas, preco: "R$ 6,00", descricao: "500ml" },
+      { nome: "Heineken Long Neck 330ml", imagem: heineken, preco: "R$ 12,00", descricao: "Para maiores de 18 anos." },
     ],
   },
+];
+
+/** Molhos e adicionais fotografados na loja. */
+export const MOLHOS = [
+  { nome: "Maionese caseira", imagem: maioneseCaseira },
+  { nome: "Maionese de cebolinha", imagem: maioneseCebolinha },
+  { nome: "Potinho de catchup", imagem: potinhoCatchup },
+  { nome: "Potinho de mostarda", imagem: potinhoMostarda },
+  { nome: "Sachê Hemmer / Heinz", imagem: sacheHemmerHeinz },
 ];
