@@ -8,6 +8,7 @@ const NAV = [
   { to: "/colors", label: "Cores" },
   { to: "/typography", label: "Tipografia" },
   { to: "/components", label: "Componentes" },
+  { to: "/cardapio", label: "Cardápio" },
 ] as const;
 
 function useTheme() {
