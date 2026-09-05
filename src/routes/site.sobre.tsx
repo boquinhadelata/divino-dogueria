@@ -5,9 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card"
 import { Marquee } from "../components/ui/marquee";
 import { buttonVariants } from "../components/ui/button";
 import loja from "../assets/loja.jpg";
-import heroDog from "../assets/hero-dog.jpg";
-import fritas from "../assets/fritas.jpg";
-import milkshake from "../assets/milkshake.jpg";
+import heroDog from "../assets/produtos/hotdog-divino.jpg";
+import fritas from "../assets/produtos/fritas.jpg";
+import milkshake from "../assets/produtos/milkshake-choco-oreo.jpg";
 
 export const Route = createFileRoute("/site/sobre")({
   head: () => ({
