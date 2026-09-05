@@ -6,10 +6,10 @@ import { Badge } from "../components/ui/badge";
 import { Marquee } from "../components/ui/marquee";
 import { buttonVariants } from "../components/ui/button";
 import { CONTATO, PEDIR_GERAL, whatsappLink } from "../data/cardapio";
-import heroDog from "../assets/hero-dog.jpg";
-import fritas from "../assets/fritas.jpg";
-import milkshake from "../assets/milkshake.jpg";
-import combo from "../assets/combo.jpg";
+import heroDog from "../assets/produtos/hotdog-divino.jpg";
+import fritas from "../assets/produtos/batata-cheddar-bacon.jpg";
+import milkshake from "../assets/produtos/milkshake-doce-de-leite.jpg";
+import combo from "../assets/produtos/hotdog-duplo.jpg";
 
 export const Route = createFileRoute("/site/")({
   head: () => ({
@@ -141,7 +141,7 @@ function Home() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
           <img
             src={combo}
-            alt="Combo com dois hot dogs, fritas e bebidas"
+            alt="Hot dog duplo da Divino Dogueria"
             loading="lazy"
             className="w-full border-2 border-border object-cover"
           />
