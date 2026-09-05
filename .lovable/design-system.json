@@ -1,0 +1,505 @@
+{
+  "meta": {
+    "name": "Cozy Code Library",
+    "package": "@ws-25216fdb9cf288274e1e/7285df04-8c92-496f-ab86-ddde3d3004af",
+    "version": "1.0.0",
+    "framework": "react",
+    "css_framework": "tailwind",
+    "starter_template": "custom_design_system",
+    "theme_files": [
+      "src/styles/theme.css"
+    ],
+    "source_type": "local",
+    "source_manifest": {
+      "#enrichment": "cba0c88990a060aa624506bcbe6b6d0670da0400fa1b80e182d61ad2507e094b",
+      ".dsignore": "a792f8ee80354b15a1782a6ea8d32076",
+      ".gitignore": "6059213806e442947666752f3db6bfdc",
+      ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
+      ".lovable/plan/design-system-inspirado-em-the-one-burger-bcn-2026-09-05.md": "b72d31b4bb247248ec3093dcccd6ec16",
+      ".lovable/sources.yaml": "8edf6f2f522904b1b41495e0ceb1c780",
+      ".lovable/system.md": "0a9a13d0de2280efd870711325bee086",
+      "README.md": "d19675c449605f23c7cfa133c69b398b",
+      "bunfig.toml": "25f4c8696b22b0943db7191e0cdf7942",
+      "eslint.config.js": "07a67437fb1a45ab36d6de0145ff09de",
+      "lovable.toml": "9636c1bf32f9901bfba4eabb92981217",
+      "mockupPreviewPlugin.ts": "8024d439734f27417621536969f64db1",
+      "package.json": "a0e45f31c4d0a34abaff0888792c8a02",
+      "public/favicon.ico": "9f504444f85a5af2eef9264b02ae40be",
+      "src/components/showcase/shell.tsx": "7e9ae408bea088ccdc02c9a201eab536",
+      "src/components/ui/badge.tsx": "57f6ac76860808bcc478528d4d066ff0",
+      "src/components/ui/button.tsx": "df6397ef9f917f9e8148eed58ffe4e66",
+      "src/components/ui/card.tsx": "385c35c0563d053ee46a024c40695aa8",
+      "src/components/ui/footer.tsx": "a76eafb07a83c44bec093218c01bfe28",
+      "src/components/ui/input.tsx": "8e56037a39cd1dbcdca0fb43dc9a9ae6",
+      "src/components/ui/marquee.tsx": "757c7c3acfd78fbff81ee8faf1609034",
+      "src/components/ui/navbar.tsx": "6413e61d6e41e02e17f1724ecbd90bc8",
+      "src/components/ui/select.tsx": "84c542109cbf61a5c1b4f553bb82b46a",
+      "src/components/ui/textarea.tsx": "79d3490ed2adc6314f527a11e1d79339",
+      "src/components/ui/typography.tsx": "e145ca743fe5563fd51a05568ad0f0e7",
+      "src/index.ts": "ccc79f3e83cefea3f146eefb8c4ea42e",
+      "src/lib/utils.ts": "d9837f38cc05303254571985e3164050",
+      "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
+      "src/routeTree.gen.ts": "6f67a8aebc2c09c9c5ed77ffc35e30e7",
+      "src/router.tsx": "8f905e713b0eba7fa8148b7995a708c9",
+      "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
+      "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
+      "src/routes/__root.tsx": "c1225028fdd08c352da3793bb6e0bdf2",
+      "src/routes/colors.tsx": "806ab1bfa6a80028c4550bdaf91c30a6",
+      "src/routes/components.tsx": "0cdda16f157beeaccf55acc3194f14c3",
+      "src/routes/index.tsx": "b300eb0c2e8dbc7a57eabecb9aa7850c",
+      "src/routes/typography.tsx": "8ab06ae6dd12178e0abc678f63ecaa36",
+      "src/styles.css": "abf9cc53609cee860d06b59cd9f9fe43",
+      "src/styles/theme.css": "673c18d0685f4f7a07c2224970978d5a",
+      "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
+      "vite.config.ts": "4fcbc01db751db166aa6df3f2f5adaf5",
+      "wrangler.jsonc": "680b897d48e44bcc65fe437c29b38f3b"
+    },
+    "pipeline_version": 8
+  },
+  "tokens": {
+    "color": [
+      {
+        "name": "--red",
+        "raw": "#ef3205",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--red-deep",
+        "raw": "#c22400",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--paper",
+        "raw": "#efefef",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--ink",
+        "raw": "#0a0a0a",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--ink-soft",
+        "raw": "#3d3d3d",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--smoke",
+        "raw": "#6b6b6b",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--white",
+        "raw": "#ffffff",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--amber",
+        "raw": "#f2b705",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--green",
+        "raw": "#0e8a3d",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--muted",
+        "raw": "#e2e2e2",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--muted-foreground",
+        "raw": "#9a9a9a",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--destructive",
+        "raw": "#ff5a33",
+        "source": "src/styles/theme.css"
+      }
+    ],
+    "spacing": [
+      {
+        "name": "--border-width",
+        "raw": "2px",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--spacing-unit",
+        "raw": "0.25rem",
+        "source": "src/styles/theme.css"
+      }
+    ],
+    "typography": [
+      {
+        "name": "--line",
+        "raw": "#d4d4d4",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--font-display",
+        "raw": "\"Archivo\", \"Arial Black\", sans-serif",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--font-sans",
+        "raw": "\"Archivo\", system-ui, sans-serif",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--text-caption",
+        "raw": "0.75rem",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--text-body",
+        "raw": "1rem",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--text-lead",
+        "raw": "1.25rem",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--text-h4",
+        "raw": "1.5rem",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--text-h3",
+        "raw": "2rem",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--text-h2",
+        "raw": "3rem",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--text-h1",
+        "raw": "4.5rem",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--text-display",
+        "raw": "clamp(3.5rem, 12vw, 9rem)",
+        "source": "src/styles/theme.css"
+      }
+    ],
+    "radius": [
+      {
+        "name": "--radius",
+        "raw": "0px",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--radius-pill",
+        "raw": "9999px",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--radius-xs",
+        "raw": "0px",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--radius-sm",
+        "raw": "0px",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--radius-md",
+        "raw": "0px",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--radius-lg",
+        "raw": "0px",
+        "source": "src/styles/theme.css"
+      }
+    ],
+    "shadow": [
+      {
+        "name": "--shadow-hard",
+        "raw": "4px 4px 0 0 var(--ink)",
+        "source": "src/styles/theme.css"
+      },
+      {
+        "name": "--shadow-hard-lg",
+        "raw": "8px 8px 0 0 var(--ink)",
+        "source": "src/styles/theme.css"
+      }
+    ],
+    "other": [
+      {
+        "name": "--animate-marquee",
+        "raw": "marquee 20s linear infinite",
+        "source": "src/styles/theme.css"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button",
+      "file": "src/components/ui/button",
+      "import_path": "",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "primary",
+            "secondary",
+            "inverse",
+            "ghost"
+          ],
+          "default": "primary"
+        },
+        {
+          "name": "size",
+          "type": "enum",
+          "values": [
+            "sm",
+            "md",
+            "lg"
+          ],
+          "default": "md"
+        }
+      ]
+    },
+    {
+      "name": "Badge",
+      "file": "src/components/ui/badge",
+      "import_path": "",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "solid",
+            "ink",
+            "outline",
+            "pill"
+          ],
+          "default": "solid"
+        }
+      ]
+    },
+    {
+      "name": "Card",
+      "file": "src/components/ui/card",
+      "import_path": "",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "flat",
+            "elevated",
+            "filled",
+            "brand"
+          ],
+          "default": "flat"
+        },
+        {
+          "name": "padding",
+          "type": "enum",
+          "values": [
+            "none",
+            "md",
+            "lg"
+          ],
+          "default": "md"
+        }
+      ]
+    },
+    {
+      "name": "CardHeader",
+      "file": "src/components/ui/card",
+      "import_path": ""
+    },
+    {
+      "name": "CardTitle",
+      "file": "src/components/ui/card",
+      "import_path": ""
+    },
+    {
+      "name": "CardContent",
+      "file": "src/components/ui/card",
+      "import_path": ""
+    },
+    {
+      "name": "CardFooter",
+      "file": "src/components/ui/card",
+      "import_path": ""
+    },
+    {
+      "name": "Input",
+      "file": "src/components/ui/input",
+      "import_path": "",
+      "props": [
+        {
+          "name": "invalid",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "Textarea",
+      "file": "src/components/ui/textarea",
+      "import_path": "",
+      "props": [
+        {
+          "name": "invalid",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "file": "src/components/ui/select",
+      "import_path": "",
+      "props": [
+        {
+          "name": "invalid",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "Heading",
+      "file": "src/components/ui/typography",
+      "import_path": "",
+      "props": [
+        {
+          "name": "level",
+          "type": "enum",
+          "values": [
+            "display",
+            "h1",
+            "h2",
+            "h3",
+            "h4"
+          ],
+          "default": "h2"
+        }
+      ]
+    },
+    {
+      "name": "Text",
+      "file": "src/components/ui/typography",
+      "import_path": "",
+      "props": [
+        {
+          "name": "size",
+          "type": "enum",
+          "values": [
+            "lead",
+            "body",
+            "caption"
+          ],
+          "default": "body"
+        },
+        {
+          "name": "tone",
+          "type": "enum",
+          "values": [
+            "default",
+            "muted",
+            "brand"
+          ],
+          "default": "default"
+        }
+      ]
+    },
+    {
+      "name": "Marquee",
+      "file": "src/components/ui/marquee",
+      "import_path": "",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "brand",
+            "ink",
+            "outline"
+          ],
+          "default": "brand"
+        },
+        {
+          "name": "size",
+          "type": "enum",
+          "values": [
+            "md",
+            "lg"
+          ],
+          "default": "md"
+        },
+        {
+          "name": "items",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "separator",
+          "type": "any",
+          "default": "•"
+        }
+      ]
+    },
+    {
+      "name": "Navbar",
+      "file": "src/components/ui/navbar",
+      "import_path": ""
+    },
+    {
+      "name": "NavbarBrand",
+      "file": "src/components/ui/navbar",
+      "import_path": ""
+    },
+    {
+      "name": "NavbarNav",
+      "file": "src/components/ui/navbar",
+      "import_path": ""
+    },
+    {
+      "name": "NavbarLink",
+      "file": "src/components/ui/navbar",
+      "import_path": "",
+      "props": [
+        {
+          "name": "active",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "Footer",
+      "file": "src/components/ui/footer",
+      "import_path": ""
+    },
+    {
+      "name": "FooterHeading",
+      "file": "src/components/ui/footer",
+      "import_path": ""
+    },
+    {
+      "name": "FooterNav",
+      "file": "src/components/ui/footer",
+      "import_path": ""
+    },
+    {
+      "name": "FooterLink",
+      "file": "src/components/ui/footer",
+      "import_path": ""
+    },
+    {
+      "name": "FooterLegal",
+      "file": "src/components/ui/footer",
+      "import_path": ""
+    }
+  ]
+}
