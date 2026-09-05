@@ -80,6 +80,7 @@ function MenuItemCard({ item }: { item: MenuItem }) {
           Pedir <ArrowRight aria-hidden />
         </a>
       </CardFooter>
+      </div>
     </Card>
   );
 }
