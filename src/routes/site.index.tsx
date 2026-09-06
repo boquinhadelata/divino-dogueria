@@ -76,7 +76,7 @@ function Home() {
       <section className="border-b-2 border-border">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-16 lg:grid-cols-2 lg:py-24">
           <div>
-            <Badge variant="pill">Aberto hoje até 23h</Badge>
+            <Badge variant="pill">Aberto hoje até 23h59</Badge>
             <Heading level="display" className="mt-6">
               Dogão de 30cm<span className="text-primary">.</span> Sem meio termo.
             </Heading>
