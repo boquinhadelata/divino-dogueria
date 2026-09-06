@@ -55,26 +55,23 @@ export type MenuGroup = {
 };
 
 /**
- * Dados de exemplo para troca fácil.
- * Contato ainda pendente de confirmação do cliente.
+ * Dados oficiais da loja (confirmados pelo dono em 06/09/2026).
+ * PENDENTE: e-mail real e link do Instagram.
  */
 export const CONTATO = {
   nome: "Divino Dogueria",
-  /** PENDENTE: substituir pelo WhatsApp real da Divino Dogueria. */
-  whatsapp: "5511999999999",
-  telefone: "(11) 99999-9999",
-  /** PENDENTE: endereço real. */
-  endereco: "Rua Exemplo, 123 — Centro",
-  cidade: "São Paulo — SP",
+  whatsapp: "5554996899316",
+  telefone: "(54) 99689-9316",
+  email: "", // pendente de confirmação
+  endereco: "Av. das Hortênsias, 577 — Loja 06, Bavária",
+  cidade: "Gramado — RS (CEP 95670-000)",
   instagram: "https://instagram.com/divinodogueria",
   horarios: [
-    { dia: "Terça a quinta", hora: "18h — 23h" },
-    { dia: "Sexta e sábado", hora: "18h — 00h" },
-    { dia: "Domingo", hora: "18h — 23h" },
-    { dia: "Segunda", hora: "Fechado" },
+    { dia: "Todos os dias", hora: "18h — 23h59" },
+    { dia: "Feriados", hora: "Fechado" },
   ],
   pagamentos: ["Pix", "Cartão de crédito", "Cartão de débito", "Dinheiro", "Vale-refeição"],
-  entrega: ["Centro", "Vila Nova", "Jardim América", "Bairro Alto"],
+  entrega: ["Bavária", "Centro", "Várzea Grande", "Planalto", "Floresta"],
 };
 
 export function whatsappLink(mensagem: string) {

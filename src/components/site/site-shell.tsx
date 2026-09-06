@@ -3,6 +3,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
 import { cn } from "../../lib/utils";
 import { buttonVariants } from "../ui/button";
+import { NeonLogo } from "../ui/neon-logo";
 import { CONTATO, PEDIR_GERAL } from "../../data/cardapio";
 
 const NAV = [
@@ -20,8 +21,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b-2 border-border bg-background">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-6">
-          <Link to="/site" className="font-display text-lead font-black uppercase tracking-tight">
-            Divino<span className="text-primary"> Dogueria</span>
+          <Link to="/site" aria-label="Divino Dogueria — início">
+            <NeonLogo variant="red" layout="inline" flicker={false} className="h-9" />
           </Link>
           <nav className="hidden items-center gap-6 lg:flex">
             {NAV.map((item) => (
@@ -67,9 +68,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <footer className="border-t-2 border-border bg-foreground text-background">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
           <div>
-            <p className="font-display text-h3 font-black uppercase leading-none tracking-tight">
-              Divino<span className="text-primary"> Dogueria</span>
-            </p>
+            <NeonLogo variant="on" size="sm" flicker={false} />
             <p className="mt-4 text-body leading-relaxed opacity-80">
               Dogão de 30cm, fritas carregadas e shake que é sobremesa.
             </p>
@@ -116,7 +115,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         <div className="border-t-2 border-background/30 px-6 py-6 text-center text-caption uppercase tracking-wider opacity-70">
-          © {new Date().getFullYear()} Divino Dogueria — conteúdo de contato ainda em confirmação
+          © {new Date().getFullYear()} Divino Dogueria — Gramado, RS
         </div>
       </footer>
     </div>
