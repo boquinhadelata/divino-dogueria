@@ -56,6 +56,8 @@ export function NeonLogo({
   const glow = v === "off" ? undefined : v === "red" ? "var(--glow-neon-red)" : "var(--glow-neon-white)";
   const redClass = v === "off" ? "text-[#3a3a3a]" : "text-primary";
   const redGlow = v === "off" ? undefined : "var(--glow-neon-red)";
+  const textRed = v === "off" ? undefined : "drop-shadow(0 0 2px currentColor) drop-shadow(0 0 8px var(--red)) drop-shadow(0 0 20px var(--red-deep))";
+  const textWhite = v === "off" ? undefined : v === "red" ? textRed : "drop-shadow(0 0 2px currentColor) drop-shadow(0 0 8px #7fb4ff) drop-shadow(0 0 20px #4a86e8)";
 
   const dog = (
     <g
@@ -103,12 +105,12 @@ export function NeonLogo({
           y="76"
           fontFamily="var(--font-display)"
           fontWeight={900}
-          fontSize={36}
+          fontSize={30}
           letterSpacing={1}
           fill="none"
           stroke="currentColor"
           strokeWidth={1.6}
-          style={glow ? { filter: glow } : undefined}
+          style={textWhite ? { filter: textWhite } : undefined}
         >
           DIVINO DOGUERIA
         </text>
@@ -139,7 +141,7 @@ export function NeonLogo({
         fill="none"
         stroke="currentColor"
         strokeWidth={2.4}
-        style={redGlow ? { filter: redGlow } : undefined}
+        style={textRed ? { filter: textRed } : undefined}
       >
         DIVINO
       </text>
@@ -155,7 +157,7 @@ export function NeonLogo({
         fill="none"
         stroke="currentColor"
         strokeWidth={2.2}
-        style={glow ? { filter: glow } : undefined}
+        style={textWhite ? { filter: textWhite } : undefined}
       >
         DOGUERIA
       </text>
