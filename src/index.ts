@@ -9,7 +9,7 @@
  * 2. Importar o CSS do tema no ponto de entrada do app, após o Tailwind:
  *    @import "tailwindcss";
  *    @import "./design-system/the-bold-one/styles/theme.css";
- *    (sem o theme.css os tokens bg-primary, text-foreground, shadow-hard etc. não existem)
+ *    (sem o theme.css, os tokens bg-primary, text-foreground, shadow-hard, etc. não estarão disponíveis)
  * 3. Modo escuro: adicionar a classe `dark` no <html>.
  */
 
