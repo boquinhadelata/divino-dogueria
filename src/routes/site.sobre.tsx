@@ -4,8 +4,7 @@ import { Heading, Text } from "../components/ui/typography";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Marquee } from "../components/ui/marquee";
 import { buttonVariants } from "../components/ui/button";
-import { NeonLogo } from "../components/ui/neon-logo";
-import tijolos from "../assets/tijolos.jpg";
+import { BrandLogo } from "../components/ui/brand-logo";
 import loja from "../assets/loja.jpg";
 import heroDog from "../assets/produtos/hotdog-divino.jpg";
 import fritas from "../assets/produtos/fritas.jpg";
@@ -50,13 +49,10 @@ const PILARES = [
 function Sobre() {
   return (
     <>
-      <section
-        className="border-b-2 border-border bg-ink bg-cover bg-center"
-        style={{ backgroundImage: `url(${tijolos})` }}
-      >
+      <section className="border-b-2 border-border bg-primary">
         <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-16 text-center">
-          <NeonLogo variant="on" size="lg" />
-          <p className="mt-6 max-w-xl text-lead leading-relaxed text-white/80">
+          <BrandLogo variant="board" className="h-64 md:h-80" alt="Letreiro Divino Dogueria" />
+          <p className="mt-6 max-w-xl text-lead leading-relaxed text-primary-foreground/90">
             A Divino Dogueria nasceu de uma ideia simples: hot dog não precisa ser lanche pequeno.
             Aqui ele é prato principal, com recheio até a última mordida.
           </p>
