@@ -22,7 +22,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-40 border-b-2 border-border bg-background">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-6">
           <Link to="/site" aria-label="Divino Dogueria — início">
-            <NeonLogo variant="red" size="sm" flicker={false} />
+            <NeonLogo variant="on" layout="inline" flicker={false} className="h-9" />
           </Link>
           <nav className="hidden items-center gap-6 lg:flex">
             {NAV.map((item) => (
