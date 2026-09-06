@@ -36,6 +36,7 @@ export {
   type TextProps,
 } from "./components/ui/typography";
 export { Marquee, marqueeVariants, type MarqueeProps } from "./components/ui/marquee";
+export { NeonLogo, neonLogoVariants, type NeonLogoProps } from "./components/ui/neon-logo";
 export { Navbar, NavbarBrand, NavbarNav, NavbarLink, type NavbarLinkProps } from "./components/ui/navbar";
 export { Footer, FooterHeading, FooterNav, FooterLink, FooterLegal } from "./components/ui/footer";
 export { cn } from "./lib/utils";
