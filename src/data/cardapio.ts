@@ -56,16 +56,15 @@ export type MenuGroup = {
 
 /**
  * Dados oficiais da loja (confirmados pelo dono em 06/09/2026).
- * PENDENTE: e-mail real e link do Instagram.
  */
 export const CONTATO = {
   nome: "Divino Dogueria",
   whatsapp: "5554996899316",
   telefone: "(54) 99689-9316",
-  email: "", // pendente de confirmação
+  email: "", // loja não usa e-mail
   endereco: "Av. das Hortênsias, 577 — Loja 06, Bavária",
   cidade: "Gramado — RS (CEP 95670-000)",
-  instagram: "https://instagram.com/divinodogueria",
+  instagram: "https://www.instagram.com/divinodogueriagramado?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==",
   horarios: [
     { dia: "Todos os dias", hora: "18h — 23h59" },
     { dia: "Feriados", hora: "Fechado" },
