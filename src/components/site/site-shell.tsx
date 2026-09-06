@@ -68,14 +68,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <footer className="border-t-2 border-border bg-foreground text-background">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
           <div>
-            <div className="group inline-block">
-              <NeonLogo
-                variant="off"
-                size="sm"
-                flicker={false}
-                className="transition-[filter,color] duration-300 group-hover:text-primary"
-              />
-            </div>
+            <NeonLogo variant="on" size="sm" flicker={false} />
             <p className="mt-4 text-body leading-relaxed opacity-80">
               Dogão de 30cm, fritas carregadas e shake que é sobremesa.
             </p>

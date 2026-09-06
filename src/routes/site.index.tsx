@@ -5,7 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card"
 import { Badge } from "../components/ui/badge";
 import { Marquee } from "../components/ui/marquee";
 import { buttonVariants } from "../components/ui/button";
+import { NeonLogo } from "../components/ui/neon-logo";
 import { CONTATO, PEDIR_GERAL, whatsappLink } from "../data/cardapio";
+import tijolos from "../assets/tijolos.jpg";
 import heroDog from "../assets/produtos/hotdog-divino.jpg";
 import fritas from "../assets/produtos/batata-cheddar-bacon.jpg";
 import milkshake from "../assets/produtos/milkshake-doce-de-leite.jpg";
@@ -59,6 +61,18 @@ const CAMPEOES = [
 function Home() {
   return (
     <>
+      <section
+        className="border-b-2 border-border bg-ink bg-cover bg-center"
+        style={{ backgroundImage: `url(${tijolos})` }}
+      >
+        <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-16 text-center">
+          <NeonLogo variant="on" size="lg" />
+          <p className="mt-6 max-w-md font-display text-caption font-bold uppercase tracking-wider text-white/70">
+            Letreiro aceso, chapa ligada — todos os dias das 18h às 23h59
+          </p>
+        </div>
+      </section>
+
       <section className="border-b-2 border-border">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-16 lg:grid-cols-2 lg:py-24">
           <div>
