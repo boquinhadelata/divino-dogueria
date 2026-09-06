@@ -94,38 +94,23 @@ export function NeonLogo({
         {...props}
         className={cn(neonLogoVariants({ variant: v, layout: l }), flicker && "animate-neon-flicker", className)}
       >
-        <g transform="translate(16,6) scale(0.42) translate(-95,-10)">
+        <g transform="translate(12,10) scale(0.4) translate(-95,-10)">
           {crown}
           {dog}
         </g>
         <text
-          x="118"
-          y="82"
-          className={redClass}
+          x="112"
+          y="76"
           fontFamily="var(--font-display)"
           fontWeight={900}
-          fontSize={52}
+          fontSize={36}
           letterSpacing={1}
           fill="none"
           stroke="currentColor"
-          strokeWidth={1.8}
-          style={redGlow ? { filter: redGlow } : undefined}
-        >
-          DIVINO
-        </text>
-        <text
-          x="300"
-          y="82"
-          fontFamily="var(--font-display)"
-          fontWeight={900}
-          fontSize={52}
-          letterSpacing={1}
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={1.8}
+          strokeWidth={1.6}
           style={glow ? { filter: glow } : undefined}
         >
-          DOG
+          DIVINO DOGUERIA
         </text>
       </svg>
     );
