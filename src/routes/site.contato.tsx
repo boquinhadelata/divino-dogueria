@@ -78,20 +78,30 @@ function Contato() {
                 <CardTitle>Telefone e redes</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>{CONTATO.telefone}</p>
-                <p className="mt-2">
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href={`tel:+${CONTATO.whatsapp}`}
+                    className={buttonVariants({ size: "sm", variant: "secondary" })}
+                  >
+                    <Phone aria-hidden /> Ligar {CONTATO.telefone}
+                  </a>
                   <a
                     href={CONTATO.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline underline-offset-4"
+                    className={buttonVariants({ size: "sm", variant: "secondary" })}
                   >
                     Instagram
                   </a>
-                </p>
-                <p className="mt-4 text-caption uppercase tracking-wider text-muted-foreground">
-                  Dados de exemplo — confirmar com a loja
-                </p>
+                  {CONTATO.email && (
+                    <a
+                      href={`mailto:${CONTATO.email}`}
+                      className={buttonVariants({ size: "sm", variant: "secondary" })}
+                    >
+                      <Mail aria-hidden /> Enviar e-mail
+                    </a>
+                  )}
+                </div>
               </CardContent>
             </Card>
           </div>

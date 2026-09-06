@@ -40,8 +40,8 @@ function OndeEstamos() {
             Onde estamos<span className="text-primary">.</span>
           </Heading>
           <Text size="lead" className="mt-6 max-w-2xl">
-            Retire no balcão ou peça delivery. O endereço e os horários abaixo ainda estão em
-            confirmação com a loja.
+            Retire no balcão ou peça delivery. Estamos na Av. das Hortênsias, em Gramado, abertos
+            todos os dias das 18h às 23h59.
           </Text>
         </div>
       </section>

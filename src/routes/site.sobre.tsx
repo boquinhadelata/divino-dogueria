@@ -4,6 +4,8 @@ import { Heading, Text } from "../components/ui/typography";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Marquee } from "../components/ui/marquee";
 import { buttonVariants } from "../components/ui/button";
+import { NeonLogo } from "../components/ui/neon-logo";
+import tijolos from "../assets/tijolos.jpg";
 import loja from "../assets/loja.jpg";
 import heroDog from "../assets/produtos/hotdog-divino.jpg";
 import fritas from "../assets/produtos/fritas.jpg";
@@ -48,15 +50,24 @@ const PILARES = [
 function Sobre() {
   return (
     <>
-      <section className="border-b-2 border-border px-6 py-16">
-        <div className="mx-auto max-w-6xl">
-          <Heading level="h1">
-            A casa do dogão<span className="text-primary">.</span>
-          </Heading>
-          <Text size="lead" className="mt-6 max-w-2xl">
+      <section
+        className="border-b-2 border-border bg-ink bg-cover bg-center"
+        style={{ backgroundImage: `url(${tijolos})` }}
+      >
+        <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-16 text-center">
+          <NeonLogo variant="on" size="lg" />
+          <p className="mt-6 max-w-xl text-lead leading-relaxed text-white/80">
             A Divino Dogueria nasceu de uma ideia simples: hot dog não precisa ser lanche pequeno.
             Aqui ele é prato principal, com recheio até a última mordida.
-          </Text>
+          </p>
+        </div>
+      </section>
+
+      <section className="border-b-2 border-border px-6 py-16">
+        <div className="mx-auto max-w-6xl">
+          <Heading level="h2">
+            A casa do dogão<span className="text-primary">.</span>
+          </Heading>
         </div>
       </section>
 
