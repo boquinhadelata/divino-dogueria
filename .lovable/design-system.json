@@ -2,7 +2,7 @@
   "meta": {
     "name": "Cozy Code Library",
     "package": "@ws-25216fdb9cf288274e1e/7285df04-8c92-496f-ab86-ddde3d3004af",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -11,11 +11,15 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "cba0c88990a060aa624506bcbe6b6d0670da0400fa1b80e182d61ad2507e094b",
+      "#enrichment": "59f6387853bc0ad490c52bf1b9a8fa9d3f52bd85f62ed4435aff79bcc04daaa8",
       ".dsignore": "a792f8ee80354b15a1782a6ea8d32076",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
       ".lovable/plan/design-system-inspirado-em-the-one-burger-bcn-2026-09-05.md": "b72d31b4bb247248ec3093dcccd6ec16",
+      ".lovable/plan/fotos-reais-dos-produtos-no-site-da-divino-dogueria-2026-09-05.md": "7be7f6b1f299ee57c8cac6092e772472",
+      ".lovable/plan/logo-em-neon-animado-dados-reais-da-loja-divino-dogueria-2026-09-06.md": "2b39a0f3ac15445c82c147680eda63cb",
+      ".lovable/plan/logo-real-extraída-do-vídeo-fundo-vermelho-pão-mostarda-2026-09-06.md": "91c0f6405ece6be37e74fc8973d93d0c",
+      ".lovable/plan/site-da-divino-dogueria-com-a-linguagem-the-bold-one-2026-09-05.md": "c9d31c3a244d05bebcedc8ed1f808ccc",
       ".lovable/sources.yaml": "8edf6f2f522904b1b41495e0ceb1c780",
       ".lovable/system.md": "0a9a13d0de2280efd870711325bee086",
       "README.md": "d19675c449605f23c7cfa133c69b398b",
@@ -23,10 +27,48 @@
       "eslint.config.js": "07a67437fb1a45ab36d6de0145ff09de",
       "lovable.toml": "9636c1bf32f9901bfba4eabb92981217",
       "mockupPreviewPlugin.ts": "8024d439734f27417621536969f64db1",
-      "package.json": "a0e45f31c4d0a34abaff0888792c8a02",
-      "public/favicon.ico": "9f504444f85a5af2eef9264b02ae40be",
-      "src/components/showcase/shell.tsx": "7e9ae408bea088ccdc02c9a201eab536",
+      "package.json": "ebda857fc7934089eed9dbf04891721f",
+      "public/favicon.png": "efcce47ce0079f9451f0da513f6086f5",
+      "src/assets/logos/divino-logo.png": "31a5132ce04fce589fee248f02060b5c",
+      "src/assets/loja.jpg": "c9e6c749aef7351efcabf29a2cd421e0",
+      "src/assets/produtos/agua-com-gas.jpg": "aaa1f717db57bb2b57c3247b73cefe6e",
+      "src/assets/produtos/agua-sem-gas.jpg": "c71ca9f2da233e330e571fffddfec464",
+      "src/assets/produtos/batata-calabresa-acebolada.jpg": "5afede81f57463e6d73d6a9190158b7a",
+      "src/assets/produtos/batata-cheddar-bacon.jpg": "003d08728e123a38f9480d24eb3421a8",
+      "src/assets/produtos/batata-chocolate-ovomaltine.jpg": "dee96540ddadf544d748ecb0c10a06e9",
+      "src/assets/produtos/batata-divina.jpg": "df937f25486f8c7793897bee03bdedf3",
+      "src/assets/produtos/coca-2l-zero.jpg": "7bec7cbe2acfa63867a1c27748386dab",
+      "src/assets/produtos/coca-2l.jpg": "2f1996fe9ada272430df2c54dc809875",
+      "src/assets/produtos/coca-lata.jpg": "a01a638b04012ef6ef32d87d1865960e",
+      "src/assets/produtos/cookie-nutella.jpg": "9ec2ad57cf23d9043419ca6ab9f038cd",
+      "src/assets/produtos/fritas.jpg": "69e39585f94c76257cff2a04cd401e16",
+      "src/assets/produtos/guarana-lata-zero.jpg": "e9308b3712562cd28b1dff2c194a6b41",
+      "src/assets/produtos/guarana-lata.jpg": "4af61d0a2f23d6394a0d28f965c9e065",
+      "src/assets/produtos/heineken.jpg": "48a1122b464e704f1d7d1cb4fbe356e0",
+      "src/assets/produtos/hotdog-calabresa.jpg": "60910b64d3fd33e8ab7cbc23f3f752d3",
+      "src/assets/produtos/hotdog-carne-panela-cheddar.jpg": "a4aa813ca952c7ad33023c567948e0ac",
+      "src/assets/produtos/hotdog-costela-mostarda-mel.jpg": "a8d1e887c14492b9fc95caaecd48fec9",
+      "src/assets/produtos/hotdog-divino.jpg": "44d3cf15539b0be6c39beb734b412e1d",
+      "src/assets/produtos/hotdog-doritos.jpg": "13735c17acb6e6b8c97c83be1ff282c5",
+      "src/assets/produtos/hotdog-duplo.jpg": "d2b87af5b8d4aff9223caa8a80d08ddf",
+      "src/assets/produtos/hotdog-junior.jpg": "03a8d5f76cb29a7b853d809a92516c22",
+      "src/assets/produtos/hotdog-tradicional.jpg": "f4402fd7cbbddf9d958e4628490c41b5",
+      "src/assets/produtos/hotdog-vegetariano.jpg": "ecf1ca0aca5fe9ff22f132d312a6737f",
+      "src/assets/produtos/maionese-caseira.jpg": "66d9ec0f0799b0c6cf8b2e16402815c2",
+      "src/assets/produtos/maionese-cebolinha.jpg": "03e1eb8afe8bd78ef7305cec4f215e1f",
+      "src/assets/produtos/milkshake-choco-oreo.jpg": "8c6055f1b9f736dbb732de89c6520974",
+      "src/assets/produtos/milkshake-doce-de-leite.jpg": "29a1c1de8998d7c1746464d276108ec5",
+      "src/assets/produtos/mini-churros-mumu.jpg": "0cfbedb4e9de6e41f87c091d4441c250",
+      "src/assets/produtos/potinho-catchup.jpg": "fe05c88cb486b30537cf36a0c995bd2a",
+      "src/assets/produtos/potinho-mostarda.jpg": "14c8fa9a8d723d254fe7351aaf96d826",
+      "src/assets/produtos/pudinzim.jpg": "a0b184055de87777d21bbb4dfc3786c9",
+      "src/assets/produtos/sache-hemmer-heinz.jpg": "475ddcd201b5013e4b8b3ddb7cd6fac5",
+      "src/assets/produtos/sprite-lata.jpg": "36facce306fa6e062c287c9b6ebcdacc",
+      "src/assets/produtos/suco-uva.jpg": "7ac46eae56c9a6ddd6debe8261c1a3e5",
+      "src/components/showcase/shell.tsx": "b8d2177ee389aeb268679ab1200e7a31",
+      "src/components/site/site-shell.tsx": "4ca0361ab4efe6aab0779c3bf557b025",
       "src/components/ui/badge.tsx": "57f6ac76860808bcc478528d4d066ff0",
+      "src/components/ui/brand-logo.tsx": "68e97112f129c3aac845d01a57cd6bc7",
       "src/components/ui/button.tsx": "df6397ef9f917f9e8148eed58ffe4e66",
       "src/components/ui/card.tsx": "385c35c0563d053ee46a024c40695aa8",
       "src/components/ui/footer.tsx": "a76eafb07a83c44bec093218c01bfe28",
@@ -36,21 +78,29 @@
       "src/components/ui/select.tsx": "84c542109cbf61a5c1b4f553bb82b46a",
       "src/components/ui/textarea.tsx": "79d3490ed2adc6314f527a11e1d79339",
       "src/components/ui/typography.tsx": "e145ca743fe5563fd51a05568ad0f0e7",
-      "src/index.ts": "ccc79f3e83cefea3f146eefb8c4ea42e",
+      "src/data/cardapio.ts": "9340f30f903538518131d07ba4d4e33c",
+      "src/index.ts": "c6c4ba7f2dc2fb40ad86b59858d3446f",
       "src/lib/utils.ts": "d9837f38cc05303254571985e3164050",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
-      "src/routeTree.gen.ts": "6f67a8aebc2c09c9c5ed77ffc35e30e7",
+      "src/routeTree.gen.ts": "3becc3199cdc0a6b7e89c1934ba20e60",
       "src/router.tsx": "8f905e713b0eba7fa8148b7995a708c9",
       "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
-      "src/routes/__root.tsx": "c1225028fdd08c352da3793bb6e0bdf2",
+      "src/routes/__root.tsx": "79f48e660274857ccbeb02cf3e0e55ed",
+      "src/routes/cardapio.tsx": "378fe47c9fd3e11eea2322dd40077620",
       "src/routes/colors.tsx": "806ab1bfa6a80028c4550bdaf91c30a6",
       "src/routes/components.tsx": "0cdda16f157beeaccf55acc3194f14c3",
       "src/routes/index.tsx": "b300eb0c2e8dbc7a57eabecb9aa7850c",
+      "src/routes/site.cardapio.tsx": "4a5a17154549de9e6a18da77743aa510",
+      "src/routes/site.contato.tsx": "ed2e9eb29d47d82797f1f0f8887c6848",
+      "src/routes/site.index.tsx": "e982865e2c16c8b9c4dd2d66a3f3f08e",
+      "src/routes/site.onde-estamos.tsx": "c120cf66fc7d547c29815917708b141e",
+      "src/routes/site.sobre.tsx": "413b95babb56a239d533ca1de0061ecb",
+      "src/routes/site.tsx": "5772e255e6c525e94682d2dacfc0eb13",
       "src/routes/typography.tsx": "8ab06ae6dd12178e0abc678f63ecaa36",
       "src/styles.css": "abf9cc53609cee860d06b59cd9f9fe43",
-      "src/styles/theme.css": "673c18d0685f4f7a07c2224970978d5a",
-      "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
+      "src/styles/theme.css": "464b4581997dfc818e9389737fb49622",
+      "tsconfig.json": "88dba064aae5d970030e3dedfa82d124",
       "vite.config.ts": "4fcbc01db751db166aa6df3f2f5adaf5",
       "wrangler.jsonc": "680b897d48e44bcc65fe437c29b38f3b"
     },
@@ -451,6 +501,27 @@
       ]
     },
     {
+      "name": "BrandLogo",
+      "file": "src/components/ui/brand-logo",
+      "import_path": "",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "board",
+            "bare"
+          ],
+          "default": "bare"
+        },
+        {
+          "name": "alt",
+          "type": "string",
+          "default": "Divino Dogueria"
+        }
+      ]
+    },
+    {
       "name": "Navbar",
       "file": "src/components/ui/navbar",
       "import_path": ""
@@ -500,6 +571,188 @@
       "name": "FooterLegal",
       "file": "src/components/ui/footer",
       "import_path": ""
+    }
+  ],
+  "assets": [
+    {
+      "file": "src/assets/logos/divino-logo.png",
+      "kind": "logo",
+      "format": "png"
+    },
+    {
+      "file": "src/assets/loja.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/agua-com-gas.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/agua-sem-gas.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/batata-calabresa-acebolada.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/batata-cheddar-bacon.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/batata-chocolate-ovomaltine.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/batata-divina.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/coca-2l-zero.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/coca-2l.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/coca-lata.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/cookie-nutella.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/fritas.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/guarana-lata-zero.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/guarana-lata.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/heineken.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/hotdog-calabresa.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/hotdog-carne-panela-cheddar.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/hotdog-costela-mostarda-mel.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/hotdog-divino.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/hotdog-doritos.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/hotdog-duplo.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/hotdog-junior.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/hotdog-tradicional.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/hotdog-vegetariano.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/maionese-caseira.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/maionese-cebolinha.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/milkshake-choco-oreo.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/milkshake-doce-de-leite.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/mini-churros-mumu.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/potinho-catchup.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/potinho-mostarda.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/pudinzim.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/sache-hemmer-heinz.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/sprite-lata.jpg",
+      "kind": "image",
+      "format": "jpg"
+    },
+    {
+      "file": "src/assets/produtos/suco-uva.jpg",
+      "kind": "image",
+      "format": "jpg"
     }
   ]
 }

@@ -4,7 +4,7 @@
 
 The design system exports these components — import them from `@ws-25216fdb9cf288274e1e/7285df04-8c92-496f-ab86-ddde3d3004af` and compose them before building anything from scratch:
 
-`Badge`, `Button`, `CardContent`, `CardFooter`, `CardHeader`, `CardTitle`, `Card`, `FooterHeading`, `FooterLegal`, `FooterLink`, `FooterNav`, `Footer`, `Heading`, `Input`, `Marquee`, `NavbarBrand`, `NavbarLink`, `NavbarNav`, `Navbar`, `Select`, `Text`, `Textarea`
+`Badge`, `BrandLogo`, `Button`, `CardContent`, `CardFooter`, `CardHeader`, `CardTitle`, `Card`, `FooterHeading`, `FooterLegal`, `FooterLink`, `FooterNav`, `Footer`, `Heading`, `Input`, `Marquee`, `NavbarBrand`, `NavbarLink`, `NavbarNav`, `Navbar`, `Select`, `Text`, `Textarea`
 
 Per-component details (import stanzas, props, variants, examples) live in `.lovable/rules/libraries/{slug}/components.md` — on disk, not auto-loaded. Read that file or the component source when the name alone isn't enough.
 

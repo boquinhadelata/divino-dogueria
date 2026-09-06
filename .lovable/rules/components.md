@@ -14,6 +14,19 @@ import { Badge } from "@ws-25216fdb9cf288274e1e/7285df04-8c92-496f-ab86-ddde3d30
 |---|---|---|
 | `variant` | solid · ink · outline · pill | `solid` |
 
+### BrandLogo
+
+```ts
+import { BrandLogo } from "@ws-25216fdb9cf288274e1e/7285df04-8c92-496f-ab86-ddde3d3004af"
+```
+
+**Props:**
+
+| Prop | Type | Default |
+|---|---|---|
+| `variant` | board · bare | `bare` |
+| `alt` | string | `Divino Dogueria` |
+
 ### Button
 
 ```ts
