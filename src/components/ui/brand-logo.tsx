@@ -5,9 +5,8 @@ import logoUrl from "../../assets/logos/divino-logo.png";
 
 const brandLogoVariants = cva("inline-flex items-center justify-center", {
   variants: {
-    // board = letreiro montado num painel escuro (fiel ao neon); bare = imagem solta
     variant: {
-      board: "border-2 border-border bg-ink p-4 shadow-hard",
+      board: "",
       bare: "",
     },
   },
