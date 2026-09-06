@@ -97,7 +97,14 @@
   --shadow-hard: 4px 4px 0 0 var(--ink);
   --shadow-hard-lg: 8px 8px 0 0 var(--ink);
 
+  /* Neon (letreiro) */
+  --glow-neon-red: 0 0 6px currentColor, 0 0 18px var(--red), 0 0 42px var(--red),
+    0 0 80px var(--red-deep);
+  --glow-neon-white: 0 0 6px currentColor, 0 0 18px #bcd8ff, 0 0 42px #7fb4ff,
+    0 0 80px #4a86e8;
+
   --animate-marquee: marquee 20s linear infinite;
+  --animate-neon-flicker: neon-flicker 2.4s ease-out 0.2s both;
 
   @keyframes marquee {
     from {
@@ -106,6 +113,43 @@
     to {
       transform: translateX(-50%);
     }
+  }
+
+  @keyframes neon-flicker {
+    0% {
+      opacity: 0;
+    }
+    6% {
+      opacity: 1;
+    }
+    10% {
+      opacity: 0.35;
+    }
+    14% {
+      opacity: 1;
+    }
+    22% {
+      opacity: 0.5;
+    }
+    26% {
+      opacity: 1;
+    }
+    38% {
+      opacity: 0.75;
+    }
+    42% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-neon-flicker,
+  .animate-marquee {
+    animation: none !important;
   }
 }
 
