@@ -76,7 +76,7 @@ export function NeonLogo({ variant = "on", size, flicker = true, className, ...p
         strokeWidth={6}
         strokeLinecap="round"
         fill="none"
-        style={glow ? { filter: `drop-shadow(${glow})` } : undefined}
+        style={glow ? { filter: glow } : undefined}
       >
         <path d="M60 76 Q120 52 180 76" />
         <path d="M58 96 Q70 84 84 94 Q96 103 108 94 Q120 85 132 94 Q144 103 156 94 Q168 85 182 96" />
@@ -109,7 +109,7 @@ export function NeonLogo({ variant = "on", size, flicker = true, className, ...p
         fontSize={44}
         letterSpacing={4}
         fill="currentColor"
-        style={glow ? { filter: `drop-shadow(${glow})` } : undefined}
+        style={glow ? { filter: glow } : undefined}
       >
         DOGUERIA
       </text>
