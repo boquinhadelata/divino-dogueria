@@ -1,34 +1,37 @@
-# Logo em neon animado na Divino Dogueria
+# Logo em neon animado + dados reais da loja — Divino Dogueria
 
-Usar o vídeo enviado como referência visual (letreiro de neon aceso em parede de tijolos) e recriar esse efeito no site, animado, sem depender do arquivo de vídeo.
+Duas entregas no mesmo passo: recriar no site o letreiro de neon do vídeo de referência e substituir os dados de contato de exemplo pelos reais da loja.
 
-## Por que recriar em vez de usar o vídeo
+## 1. Logo em neon animado
 
-O vídeo tem a marca d'água "Luma AI" no canto e apenas 5 segundos em qualidade média. Recriando o letreiro em código, o brilho fica nítido em qualquer tela, carrega rápido e pode ser reutilizado no topo, no rodapé e na página "Sobre".
+O vídeo enviado é a referência visual (letreiro de neon aceso em parede de tijolos), mas tem marca d'água "Luma AI" e só 5 segundos — por isso o letreiro será recriado em código (SVG animado), nítido em qualquer tela, rápido e reutilizável. O arquivo de vídeo fica só como referência, não entra no site.
 
-## O que será feito
+- **Componente `NeonLogo`** (`src/components/ui/neon-logo.tsx`): "DIVINO DOGUERIA" com o cachorro-quente e a coroa em traço de neon — vermelho no "DIVINO" e branco/azulado no "DOGUERIA", como na referência. Variações `variant` (red/white/off) e `size` (sm/md/lg) via CVA, exportado em `src/index.ts`.
+- **Animação**: brilho pulsante suave e um leve "piscar" de tubo de neon ao entrar na tela; desativada para quem prefere menos movimento (`prefers-reduced-motion`).
+- **Fundo**: textura escura de parede de tijolos gerada como imagem, no tom da referência.
+- **Tokens novos** em `src/styles/theme.css`: brilhos neon (`--glow-neon-red`, `--glow-neon-white`) e keyframes de flicker.
 
-1. **Logo em neon (novo componente `NeonLogo`)**
-   - Letreiro "DIVINO DOGUERIA" com o cachorro-quente e a coroa, em traço de neon: vermelho no "DIVINO" e branco/azulado no "DOGUERIA", como na referência.
-   - Brilho pulsante suave e um leve "piscar" de tubo de neon ao entrar na tela, feito com animação de código (sem vídeo).
-   - Respeita quem prefere menos animação no sistema (a animação para).
+### Onde aparece
 
-2. **Onde aparece**
-   - **Página inicial**: bloco de destaque com fundo escuro de parede, o letreiro aceso e o botão de pedido — logo abaixo do topo.
-   - **Topo do site**: versão pequena do letreiro no lugar do nome em texto.
-   - **Rodapé**: versão pequena, apagada, acendendo ao passar o mouse.
-   - **Página "Sobre"**: o letreiro grande como abertura.
+- **Página inicial**: bloco de destaque com fundo de parede escura, o letreiro aceso e o botão de pedido, logo abaixo do topo.
+- **Topo do site**: versão pequena do letreiro no lugar do nome em texto.
+- **Rodapé**: versão pequena, apagada, que acende ao passar o mouse.
+- **Página "Sobre"**: letreiro grande como abertura.
 
-3. **Fundo de parede**
-   - Textura escura de parede de tijolos gerada como imagem de fundo do bloco do letreiro, no tom da referência.
+## 2. Dados reais da loja (do print enviado)
 
-4. **No design system**
-   - `NeonLogo` entra na biblioteca (com variações de tamanho e de cor) e é exportado para reuso em outros projetos, junto de um token de brilho neon.
+Atualizar `src/data/cardapio.ts` (`CONTATO`) e as páginas que o usam:
+
+- **WhatsApp / telefone**: (54) 99689-9316 (links `wa.me/5554996899316` e `tel:` para o botão de ligar).
+- **Endereço**: Av das Hortênsias, nº 577 - Loja 06, Bavária, CEP 95670-000, Gramado - RS.
+- **Horários**: todos os dias 18:00–23:59; feriados fechado.
+- **Mapa** em "Onde estamos": embutir Google Maps apontando o endereço real.
+- **Botão de e-mail**: adicionar opção "Enviar e-mail" na página de contato — pendente do e-mail real; fica pronto com placeholder até a confirmação.
+- **Instagram**: mantém o atual até receber o link certo.
 
 ## Detalhes técnicos
 
-- Componente SVG em `src/components/ui/neon-logo.tsx`, com `variant` (red/white/off) e `size` (sm/md/lg) via CVA, exportado em `src/index.ts`.
-- Glow por `filter: drop-shadow` em camadas + `text-shadow`, tokens novos (`--glow-neon-red`, `--glow-neon-white`) e keyframes de flicker em `src/styles/theme.css`.
-- Animação desativada em `prefers-reduced-motion`.
-- Fundo de tijolos gerado como imagem em `src/assets/`.
-- O arquivo de vídeo enviado fica só como referência, não entra no site.
+- Sem backend: só dados estáticos em `src/data/cardapio.ts`, componentes e CSS.
+- Mapa via iframe do Google Maps com `loading="lazy"`.
+- `NeonLogo` segue o contrato de componentes da biblioteca: tokens, variantes nomeadas, acessível (rótulo oculto para leitores de tela), export no barrel.
+- Remover o aviso "conteúdo ainda em confirmação" do rodapé após aplicar os dados reais (e-mail continua marcado como pendente).
