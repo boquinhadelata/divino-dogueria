@@ -94,7 +94,7 @@ export function NeonLogo({ variant = "on", size, flicker = true, className, ...p
         fontSize={64}
         letterSpacing={2}
         fill="currentColor"
-        style={redGlow ? { filter: `drop-shadow(${redGlow})` } : undefined}
+        style={redGlow ? { filter: redGlow } : undefined}
       >
         DIVINO
       </text>
