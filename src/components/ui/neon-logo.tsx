@@ -65,7 +65,7 @@ export function NeonLogo({ variant = "on", size, flicker = true, className, ...p
         strokeLinejoin="round"
         strokeLinecap="round"
         fill="none"
-        style={redGlow ? { filter: `drop-shadow(${redGlow})` } : undefined}
+        style={redGlow ? { filter: redGlow } : undefined}
       >
         <path d="M95 46 L90 18 L110 34 L120 10 L130 34 L150 18 L145 46 Z" />
       </g>
