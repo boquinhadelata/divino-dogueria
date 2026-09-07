@@ -10,7 +10,7 @@ import heroDog from "../assets/produtos/hotdog-divino.jpg";
 import fritas from "../assets/produtos/fritas.jpg";
 import milkshake from "../assets/produtos/milkshake-choco-oreo.jpg";
 
-export const Route = createFileRoute("/sobre")({
+export const Route = createFileRoute("/_site/sobre")({
   head: () => ({
     meta: [
       { title: "Sobre — Divino Dogueria" },

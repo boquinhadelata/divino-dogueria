@@ -8,7 +8,7 @@ import { Textarea } from "../components/ui/textarea";
 import { Button, buttonVariants } from "../components/ui/button";
 import { CONTATO, PEDIR_GERAL, whatsappLink } from "../data/cardapio";
 
-export const Route = createFileRoute("/contato")({
+export const Route = createFileRoute("/_site/contato")({
   head: () => ({
     meta: [
       { title: "Contato — Divino Dogueria" },

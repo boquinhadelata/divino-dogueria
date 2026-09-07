@@ -7,7 +7,7 @@ import { Marquee } from "../components/ui/marquee";
 import { buttonVariants } from "../components/ui/button";
 import { MENU, pedirItemLink, type MenuItem } from "../data/cardapio";
 
-export const Route = createFileRoute("/cardapio")({
+export const Route = createFileRoute("/_site/cardapio")({
   head: () => ({
     meta: [
       { title: "Cardápio — Divino Dogueria" },

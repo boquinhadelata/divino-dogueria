@@ -9,38 +9,43 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SobreRouteImport } from './routes/sobre'
-import { Route as OndeEstamosRouteImport } from './routes/onde-estamos'
-import { Route as ContatoRouteImport } from './routes/contato'
-import { Route as CardapioRouteImport } from './routes/cardapio'
-import { Route as IndexRouteImport } from './routes/index'
+import { Route as SiteRouteImport } from './routes/_site'
+import { Route as SiteIndexRouteImport } from './routes/_site.index'
+import { Route as SiteSobreRouteImport } from './routes/_site.sobre'
+import { Route as SiteOndeEstamosRouteImport } from './routes/_site.onde-estamos'
+import { Route as SiteContatoRouteImport } from './routes/_site.contato'
+import { Route as SiteCardapioRouteImport } from './routes/_site.cardapio'
 import { Route as Char91__mockupChar93PreviewSplatRouteImport } from './routes/[__mockup].preview.$'
 import { Route as Char91__componentChar93PreviewSplatRouteImport } from './routes/[__component].preview.$'
 
-const SobreRoute = SobreRouteImport.update({
-  id: '/sobre',
-  path: '/sobre',
+const SiteRoute = SiteRouteImport.update({
+  id: '/_site',
   getParentRoute: () => rootRouteImport,
 } as any)
-const OndeEstamosRoute = OndeEstamosRouteImport.update({
-  id: '/onde-estamos',
-  path: '/onde-estamos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContatoRoute = ContatoRouteImport.update({
-  id: '/contato',
-  path: '/contato',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CardapioRoute = CardapioRouteImport.update({
-  id: '/cardapio',
-  path: '/cardapio',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndexRoute = IndexRouteImport.update({
+const SiteIndexRoute = SiteIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteSobreRoute = SiteSobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteOndeEstamosRoute = SiteOndeEstamosRouteImport.update({
+  id: '/onde-estamos',
+  path: '/onde-estamos',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteContatoRoute = SiteContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteCardapioRoute = SiteCardapioRouteImport.update({
+  id: '/cardapio',
+  path: '/cardapio',
+  getParentRoute: () => SiteRoute,
 } as any)
 const Char91__mockupChar93PreviewSplatRoute =
   Char91__mockupChar93PreviewSplatRouteImport.update({
@@ -56,30 +61,31 @@ const Char91__componentChar93PreviewSplatRoute =
   } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/cardapio': typeof CardapioRoute
-  '/contato': typeof ContatoRoute
-  '/onde-estamos': typeof OndeEstamosRoute
-  '/sobre': typeof SobreRoute
+  '/': typeof SiteIndexRoute
+  '/cardapio': typeof SiteCardapioRoute
+  '/contato': typeof SiteContatoRoute
+  '/onde-estamos': typeof SiteOndeEstamosRoute
+  '/sobre': typeof SiteSobreRoute
   '/__component/preview/$': typeof Char91__componentChar93PreviewSplatRoute
   '/__mockup/preview/$': typeof Char91__mockupChar93PreviewSplatRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/cardapio': typeof CardapioRoute
-  '/contato': typeof ContatoRoute
-  '/onde-estamos': typeof OndeEstamosRoute
-  '/sobre': typeof SobreRoute
+  '/cardapio': typeof SiteCardapioRoute
+  '/contato': typeof SiteContatoRoute
+  '/onde-estamos': typeof SiteOndeEstamosRoute
+  '/sobre': typeof SiteSobreRoute
+  '/': typeof SiteIndexRoute
   '/__component/preview/$': typeof Char91__componentChar93PreviewSplatRoute
   '/__mockup/preview/$': typeof Char91__mockupChar93PreviewSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/cardapio': typeof CardapioRoute
-  '/contato': typeof ContatoRoute
-  '/onde-estamos': typeof OndeEstamosRoute
-  '/sobre': typeof SobreRoute
+  '/_site': typeof SiteRouteWithChildren
+  '/_site/cardapio': typeof SiteCardapioRoute
+  '/_site/contato': typeof SiteContatoRoute
+  '/_site/onde-estamos': typeof SiteOndeEstamosRoute
+  '/_site/sobre': typeof SiteSobreRoute
+  '/_site/': typeof SiteIndexRoute
   '/__component/preview/$': typeof Char91__componentChar93PreviewSplatRoute
   '/__mockup/preview/$': typeof Char91__mockupChar93PreviewSplatRoute
 }
@@ -95,70 +101,74 @@ export interface FileRouteTypes {
     | '/__mockup/preview/$'
   fileRoutesByTo: FileRoutesByTo
   to:
-    | '/'
     | '/cardapio'
     | '/contato'
     | '/onde-estamos'
     | '/sobre'
+    | '/'
     | '/__component/preview/$'
     | '/__mockup/preview/$'
   id:
     | '__root__'
-    | '/'
-    | '/cardapio'
-    | '/contato'
-    | '/onde-estamos'
-    | '/sobre'
+    | '/_site'
+    | '/_site/cardapio'
+    | '/_site/contato'
+    | '/_site/onde-estamos'
+    | '/_site/sobre'
+    | '/_site/'
     | '/__component/preview/$'
     | '/__mockup/preview/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  CardapioRoute: typeof CardapioRoute
-  ContatoRoute: typeof ContatoRoute
-  OndeEstamosRoute: typeof OndeEstamosRoute
-  SobreRoute: typeof SobreRoute
+  SiteRoute: typeof SiteRouteWithChildren
   Char91__componentChar93PreviewSplatRoute: typeof Char91__componentChar93PreviewSplatRoute
   Char91__mockupChar93PreviewSplatRoute: typeof Char91__mockupChar93PreviewSplatRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sobre': {
-      id: '/sobre'
-      path: '/sobre'
-      fullPath: '/sobre'
-      preLoaderRoute: typeof SobreRouteImport
+    '/_site': {
+      id: '/_site'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof SiteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/onde-estamos': {
-      id: '/onde-estamos'
-      path: '/onde-estamos'
-      fullPath: '/onde-estamos'
-      preLoaderRoute: typeof OndeEstamosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contato': {
-      id: '/contato'
-      path: '/contato'
-      fullPath: '/contato'
-      preLoaderRoute: typeof ContatoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cardapio': {
-      id: '/cardapio'
-      path: '/cardapio'
-      fullPath: '/cardapio'
-      preLoaderRoute: typeof CardapioRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/': {
-      id: '/'
+    '/_site/': {
+      id: '/_site/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof SiteIndexRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/sobre': {
+      id: '/_site/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SiteSobreRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/onde-estamos': {
+      id: '/_site/onde-estamos'
+      path: '/onde-estamos'
+      fullPath: '/onde-estamos'
+      preLoaderRoute: typeof SiteOndeEstamosRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/contato': {
+      id: '/_site/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof SiteContatoRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/cardapio': {
+      id: '/_site/cardapio'
+      path: '/cardapio'
+      fullPath: '/cardapio'
+      preLoaderRoute: typeof SiteCardapioRouteImport
+      parentRoute: typeof SiteRoute
     }
     '/__mockup/preview/$': {
       id: '/__mockup/preview/$'
@@ -177,12 +187,26 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface SiteRouteChildren {
+  SiteCardapioRoute: typeof SiteCardapioRoute
+  SiteContatoRoute: typeof SiteContatoRoute
+  SiteOndeEstamosRoute: typeof SiteOndeEstamosRoute
+  SiteSobreRoute: typeof SiteSobreRoute
+  SiteIndexRoute: typeof SiteIndexRoute
+}
+
+const SiteRouteChildren: SiteRouteChildren = {
+  SiteCardapioRoute: SiteCardapioRoute,
+  SiteContatoRoute: SiteContatoRoute,
+  SiteOndeEstamosRoute: SiteOndeEstamosRoute,
+  SiteSobreRoute: SiteSobreRoute,
+  SiteIndexRoute: SiteIndexRoute,
+}
+
+const SiteRouteWithChildren = SiteRoute._addFileChildren(SiteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  CardapioRoute: CardapioRoute,
-  ContatoRoute: ContatoRoute,
-  OndeEstamosRoute: OndeEstamosRoute,
-  SobreRoute: SobreRoute,
+  SiteRoute: SiteRouteWithChildren,
   Char91__componentChar93PreviewSplatRoute:
     Char91__componentChar93PreviewSplatRoute,
   Char91__mockupChar93PreviewSplatRoute: Char91__mockupChar93PreviewSplatRoute,
