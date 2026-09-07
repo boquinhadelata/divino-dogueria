@@ -6,7 +6,7 @@ import { Badge } from "../components/ui/badge";
 import { buttonVariants } from "../components/ui/button";
 import { CONTATO, PEDIR_GERAL } from "../data/cardapio";
 
-export const Route = createFileRoute("/site/onde-estamos")({
+export const Route = createFileRoute("/_site/onde-estamos")({
   head: () => ({
     meta: [
       { title: "Onde estamos — Divino Dogueria" },

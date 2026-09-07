@@ -10,7 +10,7 @@ import heroDog from "../assets/produtos/hotdog-divino.jpg";
 import fritas from "../assets/produtos/fritas.jpg";
 import milkshake from "../assets/produtos/milkshake-choco-oreo.jpg";
 
-export const Route = createFileRoute("/site/sobre")({
+export const Route = createFileRoute("/_site/sobre")({
   head: () => ({
     meta: [
       { title: "Sobre — Divino Dogueria" },
@@ -116,7 +116,7 @@ function Sobre() {
         <Heading level="h3">
           Bateu a fome<span className="text-primary">?</span>
         </Heading>
-        <Link to="/site/cardapio" className={`mt-8 ${buttonVariants({ size: "lg" })}`}>
+        <Link to="/cardapio" className={`mt-8 ${buttonVariants({ size: "lg" })}`}>
           Ver cardápio <ArrowRight aria-hidden />
         </Link>
       </section>

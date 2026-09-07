@@ -12,7 +12,7 @@ import fritas from "../assets/produtos/batata-cheddar-bacon.jpg";
 import milkshake from "../assets/produtos/milkshake-doce-de-leite.jpg";
 import combo from "../assets/produtos/hotdog-duplo.jpg";
 
-export const Route = createFileRoute("/site/")({
+export const Route = createFileRoute("/_site/")({
   head: () => ({
     meta: [
       { title: "Divino Dogueria — Hot dog gourmet de 30cm" },
@@ -89,7 +89,7 @@ function Home() {
               >
                 <MessageCircle aria-hidden /> Pedir no WhatsApp
               </a>
-              <Link to="/site/cardapio" className={buttonVariants({ size: "lg", variant: "secondary" })}>
+              <Link to="/cardapio" className={buttonVariants({ size: "lg", variant: "secondary" })}>
                 Ver cardápio <ArrowRight aria-hidden />
               </Link>
             </div>
@@ -161,7 +161,7 @@ function Home() {
               Quatro dogões e uma Coca 2l por R$ 112,00. Do jeito que a galera pede na sexta.
             </Text>
             <Link
-              to="/site/cardapio"
+              to="/cardapio"
               hash="combos"
               className={`mt-8 ${buttonVariants({ size: "lg" })}`}
             >
@@ -197,7 +197,7 @@ function Home() {
               {CONTATO.endereco} — {CONTATO.cidade}
             </p>
             <Link
-              to="/site/onde-estamos"
+              to="/onde-estamos"
               className="mt-6 inline-flex items-center gap-2 font-display text-caption font-bold uppercase tracking-wider underline underline-offset-4"
             >
               Como chegar <ArrowRight aria-hidden className="size-4" />

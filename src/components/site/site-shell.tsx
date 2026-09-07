@@ -7,11 +7,11 @@ import { BrandLogo } from "../ui/brand-logo";
 import { CONTATO, PEDIR_GERAL } from "../../data/cardapio";
 
 const NAV = [
-  { to: "/site", label: "Início" },
-  { to: "/site/cardapio", label: "Cardápio" },
-  { to: "/site/sobre", label: "Sobre" },
-  { to: "/site/onde-estamos", label: "Onde estamos" },
-  { to: "/site/contato", label: "Contato" },
+  { to: "/", label: "Início" },
+  { to: "/cardapio", label: "Cardápio" },
+  { to: "/sobre", label: "Sobre" },
+  { to: "/onde-estamos", label: "Onde estamos" },
+  { to: "/contato", label: "Contato" },
 ] as const;
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
@@ -21,7 +21,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b-2 border-border bg-background">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-6">
-          <Link to="/site" aria-label="Divino Dogueria — início">
+          <Link to="/" aria-label="Divino Dogueria — início">
             <BrandLogo className="h-14" alt="Divino Dogueria" />
           </Link>
           <nav className="hidden items-center gap-6 lg:flex">
