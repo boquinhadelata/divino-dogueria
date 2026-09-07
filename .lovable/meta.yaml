@@ -5,3 +5,11 @@ source_type: local
 upstream_package: ""
 starter_template: custom_design_system
 stack_packages: []
+upstream_versions:
+  lucide-react: 1.41.0
+  class-variance-authority: 0.7.1
+  clsx: 2.1.1
+  tailwind-merge: 3.6.0
+  tailwindcss: 4.3.3
+  react: 19.2.7
+  react-dom: 19.2.7
