@@ -21,7 +21,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b-2 border-border bg-background">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-6">
-          <Link to="/site" aria-label="Divino Dogueria — início">
+          <Link to="/" aria-label="Divino Dogueria — início">
             <BrandLogo className="h-14" alt="Divino Dogueria" />
           </Link>
           <nav className="hidden items-center gap-6 lg:flex">

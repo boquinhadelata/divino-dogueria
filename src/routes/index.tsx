@@ -1,102 +1,210 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
-import { ShowcaseShell } from "../components/showcase/shell";
-import { Marquee } from "../components/ui/marquee";
-import { Button } from "../components/ui/button";
+import { ArrowRight, Clock, MapPin, MessageCircle } from "lucide-react";
+import { Heading, Text } from "../components/ui/typography";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
+import { Marquee } from "../components/ui/marquee";
+import { buttonVariants } from "../components/ui/button";
+import { BrandLogo } from "../components/ui/brand-logo";
+import { CONTATO, PEDIR_GERAL, whatsappLink } from "../data/cardapio";
+import heroDog from "../assets/produtos/hotdog-divino.jpg";
+import fritas from "../assets/produtos/batata-cheddar-bacon.jpg";
+import milkshake from "../assets/produtos/milkshake-doce-de-leite.jpg";
+import combo from "../assets/produtos/hotdog-duplo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The Bold One — Design System" },
+      { title: "Divino Dogueria — Hot dog gourmet de 30cm" },
       {
         name: "description",
         content:
-          "Design system gráfico e editorial: vermelho vibrante, tipografia gigante em caixa alta, cantos retos e bordas grossas.",
+          "Hot dogs gourmet de 30cm, batatas carregadas, milkshakes e combos. Peça pelo WhatsApp e receba em casa.",
       },
-      { property: "og:title", content: "The Bold One — Design System" },
+      { property: "og:title", content: "Divino Dogueria — Hot dog gourmet de 30cm" },
       {
         property: "og:description",
-        content:
-          "Design system gráfico e editorial: vermelho vibrante, tipografia gigante em caixa alta, cantos retos e bordas grossas.",
+        content: "Hot dogs gourmet de 30cm, batatas carregadas, milkshakes e combos.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Overview,
+  component: Home,
 });
 
-const PRINCIPLES = [
+const CAMPEOES = [
   {
-    n: "01",
-    title: "Tipografia é o layout",
-    text: "Headlines gigantes em caixa alta carregam a página. Uma frase grande vale mais que um parágrafo.",
+    nome: "Hot Dog Divino",
+    preco: "R$ 44,90",
+    img: heroDog,
+    texto: "Calabresa, bacon, carne de panela, Catupiry, cheddar e fritas. O nome não é à toa.",
+    tag: "Mais pedido",
   },
   {
-    n: "02",
-    title: "Blocos, não cartões",
-    text: "Superfícies retas com bordas grossas e sombra sólida deslocada. Nada de blur ou cantos arredondados.",
+    nome: "Batata Cheddar e Bacon",
+    preco: "R$ 32,00",
+    img: fritas,
+    texto: "300g de fritas afogadas em cheddar cremoso com cubinhos de bacon.",
+    tag: "Para dividir",
   },
   {
-    n: "03",
-    title: "Vermelho é ação",
-    text: "O primário aparece em CTAs, destaques e seleção. Cor plana, sem gradientes, sem timidez.",
+    nome: "Milk Shake Doce de Leite",
+    preco: "R$ 32,00",
+    img: milkshake,
+    texto: "Doce de leite MUMU com farofa de paçoca no copo de 350ml.",
+    tag: "Sobremesa",
   },
 ];
 
-function Overview() {
+function Home() {
   return (
-    <ShowcaseShell>
-      <section className="border-b-2 border-border px-6 py-20">
-        <div className="flex flex-wrap items-center gap-3">
-          <Badge variant="solid">v0.1</Badge>
-          <Badge variant="outline">Tailwind v4</Badge>
-          <Badge variant="pill">React 19</Badge>
+    <>
+      <section className="border-b-2 border-border bg-primary">
+        <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-16 text-center">
+          <BrandLogo variant="bare" className="h-64 md:h-80" alt="Logo Divino Dogueria" />
+          <p className="mt-6 max-w-md font-display text-caption font-bold uppercase tracking-wider text-primary-foreground/90">
+            Chapa ligada — todos os dias das 18h às 23h59
+          </p>
         </div>
-        <h1 className="mt-8 font-display text-display font-black uppercase leading-[0.9] tracking-tight">
-          The Bold
-          <br />
-          One<span className="text-primary">.</span>
-        </h1>
-        <p className="mt-8 max-w-xl text-lead leading-relaxed text-muted-foreground">
-          Um design system gráfico e editorial: vermelho vibrante sobre papel,
-          tipografia gigante, cantos retos e bordas grossas. Feito para marcas
-          com opinião.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-4">
-          <Link to="/components">
-            <Button size="lg">
-              Ver componentes <ArrowRight aria-hidden />
-            </Button>
-          </Link>
-          <Link to="/colors">
-            <Button size="lg" variant="secondary">
-              Explorar tokens
-            </Button>
-          </Link>
+      </section>
+
+      <section className="border-b-2 border-border">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-16 lg:grid-cols-2 lg:py-24">
+          <div>
+            <Badge variant="pill">Aberto hoje até 23h59</Badge>
+            <Heading level="display" className="mt-6">
+              Dogão de 30cm<span className="text-primary">.</span> Sem meio termo.
+            </Heading>
+            <Text size="lead" className="mt-6 max-w-xl">
+              Hot dog gourmet feito na hora, batata carregada e shake que vale por sobremesa. Pediu,
+              chegou quentinho.
+            </Text>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href={PEDIR_GERAL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={buttonVariants({ size: "lg" })}
+              >
+                <MessageCircle aria-hidden /> Pedir no WhatsApp
+              </a>
+              <Link to="/cardapio" className={buttonVariants({ size: "lg", variant: "secondary" })}>
+                Ver cardápio <ArrowRight aria-hidden />
+              </Link>
+            </div>
+          </div>
+          <img
+            src={heroDog}
+            alt="Hot dog de 30cm com carne desfiada, cheddar e batata palha"
+            width={1600}
+            height={1200}
+            className="w-full border-2 border-border object-cover shadow-hard"
+          />
         </div>
       </section>
 
       <Marquee
-        size="lg"
-        items={["Design System", "Tokens", "Componentes", "Cantos Retos", "Caixa Alta"]}
+        items={["Hot dog 30cm", "Delivery", "Retirada no balcão", "Feito na hora", "Divino"]}
+        variant="brand"
       />
 
-      <section className="grid border-b-2 border-border md:grid-cols-3">
-        {PRINCIPLES.map((p) => (
-          <article
-            key={p.n}
-            className="border-b-2 border-border p-10 last:border-b-0 md:border-b-0 md:border-r-2 md:last:border-r-0"
-          >
-            <p className="font-display text-h3 font-black text-primary">{p.n}</p>
-            <h2 className="mt-4 font-display text-h4 font-black uppercase tracking-tight">
-              {p.title}
-            </h2>
-            <p className="mt-3 text-body leading-relaxed text-muted-foreground">{p.text}</p>
-          </article>
-        ))}
+      <section className="border-b-2 border-border px-6 py-16">
+        <div className="mx-auto max-w-6xl">
+          <Heading level="h2">Os campeões</Heading>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {CAMPEOES.map((c) => (
+              <Card key={c.nome} variant="elevated" padding="none" className="flex flex-col">
+                <img
+                  src={c.img}
+                  alt={c.nome}
+                  loading="lazy"
+                  className="aspect-[4/3] w-full border-b-2 border-border object-cover"
+                />
+                <div className="flex flex-1 flex-col p-6">
+                  <CardHeader>
+                    <Badge variant="outline">{c.tag}</Badge>
+                    <CardTitle>{c.nome}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-1">{c.texto}</CardContent>
+                  <div className="mt-6 flex items-center justify-between">
+                    <Text size="lead" className="font-display font-black">
+                      {c.preco}
+                    </Text>
+                    <a
+                      href={whatsappLink(`Olá! Quero pedir 1x ${c.nome} (${c.preco}).`)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={buttonVariants({ size: "sm" })}
+                    >
+                      Pedir <ArrowRight aria-hidden />
+                    </a>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
       </section>
-    </ShowcaseShell>
+
+      <section className="border-b-2 border-border px-6 py-16">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+          <img
+            src={combo}
+            alt="Hot dog duplo da Divino Dogueria"
+            loading="lazy"
+            className="w-full border-2 border-border object-cover"
+          />
+          <div>
+            <Heading level="h2">Combo para a mesa toda</Heading>
+            <Text size="lead" className="mt-6">
+              Quatro dogões e uma Coca 2l por R$ 112,00. Do jeito que a galera pede na sexta.
+            </Text>
+            <Link
+              to="/cardapio"
+              hash="combos"
+              className={`mt-8 ${buttonVariants({ size: "lg" })}`}
+            >
+              Ver combos <ArrowRight aria-hidden />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-16">
+        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
+          <Card variant="flat" padding="lg">
+            <div className="flex items-center gap-3">
+              <Clock aria-hidden className="size-5 text-primary" />
+              <Text size="caption" tone="muted">
+                Horários
+              </Text>
+            </div>
+            <ul className="mt-4 space-y-1 text-body">
+              {CONTATO.horarios.map((h) => (
+                <li key={h.dia}>
+                  <strong>{h.dia}:</strong> {h.hora}
+                </li>
+              ))}
+            </ul>
+          </Card>
+          <Card variant="brand" padding="lg">
+            <div className="flex items-center gap-3">
+              <MapPin aria-hidden className="size-5" />
+              <Text size="caption">Onde estamos</Text>
+            </div>
+            <p className="mt-4 text-body">
+              {CONTATO.endereco} — {CONTATO.cidade}
+            </p>
+            <Link
+              to="/onde-estamos"
+              className="mt-6 inline-flex items-center gap-2 font-display text-caption font-bold uppercase tracking-wider underline underline-offset-4"
+            >
+              Como chegar <ArrowRight aria-hidden className="size-4" />
+            </Link>
+          </Card>
+        </div>
+      </section>
+    </>
   );
 }
