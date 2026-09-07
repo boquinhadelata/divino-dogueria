@@ -8,7 +8,7 @@
  *    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet" />
  * 2. Importar o CSS do tema no ponto de entrada do app, após o Tailwind:
  *    @import "tailwindcss";
- *    @import "./design-system/the-bold-one/styles/theme.css";
+ *    @import "custom_design_system_tanstack/theme.css";
  *    (sem o theme.css, os tokens bg-primary, text-foreground, shadow-hard, etc. não estarão disponíveis)
  * 3. Modo escuro: adicionar a classe `dark` no <html>.
  */
