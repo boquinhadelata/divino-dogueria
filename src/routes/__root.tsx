@@ -14,11 +14,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "The Bold One — Design System" },
+      { title: "Divino Dogueria — Hot dog gourmet em Gramado" },
       {
         name: "description",
         content:
-          "Design system gráfico e editorial: vermelho vibrante, tipografia gigante em caixa alta, cantos retos e bordas grossas.",
+          "Hot dogs gourmet de 30cm, fritas, milkshakes e combos em Gramado. Peça pelo WhatsApp.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
