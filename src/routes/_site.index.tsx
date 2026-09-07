@@ -12,7 +12,7 @@ import fritas from "../assets/produtos/batata-cheddar-bacon.jpg";
 import milkshake from "../assets/produtos/milkshake-doce-de-leite.jpg";
 import combo from "../assets/produtos/hotdog-duplo.jpg";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/_site/")({
   head: () => ({
     meta: [
       { title: "Divino Dogueria — Hot dog gourmet de 30cm" },

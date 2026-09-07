@@ -7,11 +7,11 @@ import { BrandLogo } from "../ui/brand-logo";
 import { CONTATO, PEDIR_GERAL } from "../../data/cardapio";
 
 const NAV = [
-  { to: "/site", label: "Início" },
-  { to: "/site/cardapio", label: "Cardápio" },
-  { to: "/site/sobre", label: "Sobre" },
-  { to: "/site/onde-estamos", label: "Onde estamos" },
-  { to: "/site/contato", label: "Contato" },
+  { to: "/", label: "Início" },
+  { to: "/cardapio", label: "Cardápio" },
+  { to: "/sobre", label: "Sobre" },
+  { to: "/onde-estamos", label: "Onde estamos" },
+  { to: "/contato", label: "Contato" },
 ] as const;
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
