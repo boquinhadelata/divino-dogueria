@@ -21,10 +21,13 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b-2 border-border bg-background">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-6">
-          <Link to="/" aria-label="Divino Dogueria — início">
-            <BrandLogo className="h-14" alt="Divino Dogueria" />
+          <Link to="/" aria-label="Divino Dogueria — início" className="flex items-center gap-3">
+            <BrandLogo variant="icon" className="h-11 shrink-0" alt="" />
+            <span className="hidden whitespace-nowrap font-display text-xl font-black uppercase leading-none tracking-tight sm:inline">
+              <span className="text-primary">Divino</span> Dogueria
+            </span>
           </Link>
-          <nav className="hidden items-center gap-6 lg:flex">
+          <nav className="hidden items-center gap-5 lg:flex">
             {NAV.map((item) => (
               <Link
                 key={item.to}
