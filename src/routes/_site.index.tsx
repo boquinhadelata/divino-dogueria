@@ -60,10 +60,10 @@ const CAMPEOES = [
 function Home() {
   return (
     <>
-      <section className="border-b-2 border-border bg-primary">
+      <section className="border-b-2 border-border bg-foreground">
         <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-16 text-center">
           <BrandLogo variant="bare" className="h-64 md:h-80" alt="Logo Divino Dogueria" />
-          <p className="mt-6 max-w-md font-display text-caption font-bold uppercase tracking-wider text-primary-foreground/90">
+          <p className="mt-6 max-w-md font-display text-caption font-bold uppercase tracking-wider text-background/90">
             Chapa ligada — todos os dias das 18h às 23h59
           </p>
         </div>

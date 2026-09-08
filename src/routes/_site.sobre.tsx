@@ -49,10 +49,10 @@ const PILARES = [
 function Sobre() {
   return (
     <>
-      <section className="border-b-2 border-border bg-primary">
+      <section className="border-b-2 border-border bg-foreground">
         <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-16 text-center">
           <BrandLogo variant="bare" className="h-64 md:h-80" alt="Logo Divino Dogueria" />
-          <p className="mt-6 max-w-xl text-lead leading-relaxed text-primary-foreground/90">
+          <p className="mt-6 max-w-xl text-lead leading-relaxed text-background/90">
             A Divino Dogueria nasceu de uma ideia simples: hot dog não precisa ser lanche pequeno.
             Aqui ele é prato principal, com recheio até a última mordida.
           </p>
